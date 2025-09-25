@@ -10,7 +10,7 @@ use App\Models\UserResearch;
 use App\Models\UserCity;
 use App\Helpers\UserResourceHelper;
 use App\Helpers\BuildingHelper;
-use App\User;
+use App\Models\User;
 use Carbon\Carbon;
 use Auth;
 

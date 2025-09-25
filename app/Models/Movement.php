@@ -28,26 +28,26 @@ class Movement extends Model
 
     public function resources()
     {
-        return $this->hasOne('App\Models\MovementResource');
+        return $this->hasOne(MovementResource::class);
     }
 
     public function user()
     {
-        return $this->belongsTo('App\User');
+        return $this->belongsTo(User::class);
     }
 
     public function movement_regiment()
     {
-        return $this->hasOne('App\Models\MovementRegiment');
+        return $this->hasOne(MovementRegiment::class);
     }
 
     public function city_origin()
     {
-        return $this->belongsTo('App\Models\City','city_from');
+        return $this->belongsTo(City::class,'city_from');
     }
 
     public function city_destine()
     {
-        return $this->belongsTo('App\Models\City','city_to');
+        return $this->belongsTo(City::class,'city_to');
     }
 }

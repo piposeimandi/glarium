@@ -13,7 +13,7 @@ use App\Events\UserNotification;
 use App\Helpers\CityHelper;
 use App\Models\Mayor;
 use App\Models\UserCity;
-use App\User;
+use App\Models\User;
 use Auth;
 use Carbon\Carbon;
 

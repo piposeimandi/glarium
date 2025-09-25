@@ -6,6 +6,8 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use App\Models\UserCity;
+use App\Models\UserResource;
 
 class User extends Authenticatable
 {
@@ -47,11 +49,16 @@ class User extends Authenticatable
 
     public function capital()
     {
-        return $this->hasOne('App\Models\UserCity')->where('capital', 1);
+        return $this->hasOne(UserCity::class)->where('capital', 1);
+    }
+
+    public function cities()
+    {
+        return $this->hasMany(UserCity::class);
     }
 
     public function resources()
     {
-        return $this->hasOne('App\Models\UserResource');
+        return $this->hasOne(UserResource::class);
     }
 }

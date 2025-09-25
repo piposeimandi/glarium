@@ -1,6 +1,17 @@
 <?php
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Game\BuildingController;
+use App\Http\Controllers\Game\CityController;
+use App\Http\Controllers\Game\UserController;
+use App\Http\Controllers\Game\IslandController;
+use App\Http\Controllers\Game\ResearchController;
+use App\Http\Controllers\Game\MovementController;
+use App\Http\Controllers\Game\WorldController;
+use App\Http\Controllers\Game\UnitController;
+use App\Http\Controllers\Game\CombatController;
+use App\Http\Controllers\Game\ChatController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,52 +28,52 @@ use Illuminate\Http\Request;
   //  return $request->user();
 //});
 
-Route::get('buildings', 'Game\BuildingController@buildings');
-Route::post('building/nextLevel/{building}', 'Game\BuildingController@nextLevel');
-Route::post('building/{city}', 'Game\BuildingController@buildingsAvaible');
-Route::put('building/upgrade/{cityBuilding}', 'Game\BuildingController@upgrade');
-Route::put('building/{city}', 'Game\BuildingController@create');
+Route::get('buildings', [BuildingController::class, 'buildings']);
+Route::post('building/nextLevel/{building}', [BuildingController::class, 'nextLevel']);
+Route::post('building/{city}', [BuildingController::class, 'buildingsAvaible']);
+Route::put('building/upgrade/{cityBuilding}', [BuildingController::class, 'upgrade']);
+Route::put('building/{city}', [BuildingController::class, 'create']);
 
-Route::get('city/getResources/{city}', 'Game\CityController@getResources');
-Route::get('city/getPopulation/{city}', 'Game\CityController@getPopulation');
-Route::get('city/getActionPoint/{city}', 'Game\CityController@getActionPoint');
-Route::get('city/getCities', 'Game\CityController@getCities');
-Route::post('city/setScientists/{city}', 'Game\CityController@setScientists');
-Route::post('city/setWine/{city}', 'Game\CityController@setWine');
-Route::post('city/setName/{city}', 'Game\CityController@setName');
+Route::get('city/getResources/{city}', [CityController::class, 'getResources']);
+Route::get('city/getPopulation/{city}', [CityController::class, 'getPopulation']);
+Route::get('city/getActionPoint/{city}', [CityController::class, 'getActionPoint']);
+Route::get('city/getCities', [CityController::class, 'getCities']);
+Route::post('city/setScientists/{city}', [CityController::class, 'setScientists']);
+Route::post('city/setWine/{city}', [CityController::class, 'setWine']);
+Route::post('city/setName/{city}', [CityController::class, 'setName']);
 
-Route::get('user/getUserResources', 'Game\UserController@getUserResources');
-Route::get('user/config', 'Game\UserController@config');
-Route::get('user/unread', 'Game\UserController@unread');
-Route::get('user/getMayor', 'Game\UserController@getMayor');
-Route::post('user/getMessages', 'Game\UserController@getMessages');
-Route::post('user/buyTradeShip', 'Game\UserController@buyTradeShip');
-Route::post('user/sendMessage/{city}', 'Game\UserController@sendMessage');
-Route::post('user/message', 'Game\UserController@deleteMessage');
-Route::put('user/readMessages', 'Game\UserController@readMessages');
-Route::put('user/readMessage/{message}', 'Game\UserController@readMessage');
+Route::get('user/getUserResources', [UserController::class, 'getUserResources']);
+Route::get('user/config', [UserController::class, 'config']);
+Route::get('user/unread', [UserController::class, 'unread']);
+Route::get('user/getMayor', [UserController::class, 'getMayor']);
+Route::post('user/getMessages', [UserController::class, 'getMessages']);
+Route::post('user/buyTradeShip', [UserController::class, 'buyTradeShip']);
+Route::post('user/sendMessage/{city}', [UserController::class, 'sendMessage']);
+Route::post('user/message', [UserController::class, 'deleteMessage']);
+Route::put('user/readMessages', [UserController::class, 'readMessages']);
+Route::put('user/readMessage/{message}', [UserController::class, 'readMessage']);
 
-Route::post('island/donation/{island}', 'Game\IslandController@donation');
-Route::put('island/donation/{island}', 'Game\IslandController@setDonation');
-Route::post('island/setWorker/{city}', 'Game\IslandController@setWorker');
-Route::get('island/{island}', 'Game\IslandController@show');
+Route::post('island/donation/{island}', [IslandController::class, 'donation']);
+Route::put('island/donation/{island}', [IslandController::class, 'setDonation']);
+Route::post('island/setWorker/{city}', [IslandController::class, 'setWorker']);
+Route::get('island/{island}', [IslandController::class, 'show']);
 
-Route::get('research', 'Game\ResearchController@getData');
-Route::post('research/{research}', 'Game\ResearchController@create');
+Route::get('research', [ResearchController::class, 'getData']);
+Route::post('research/{research}', [ResearchController::class, 'create']);
 
-Route::get('movement', 'Game\MovementController@getMovement');
-Route::put('movement', 'Game\MovementController@endMovement');
-Route::post('movement/colonize/{city}', 'Game\MovementController@colonize');
-Route::post('movement/transport/{city}', 'Game\MovementController@transport');
-Route::delete('movement/{movement}', 'Game\MovementController@remove');
+Route::get('movement', [MovementController::class, 'getMovement']);
+Route::put('movement', [MovementController::class, 'endMovement']);
+Route::post('movement/colonize/{city}', [MovementController::class, 'colonize']);
+Route::post('movement/transport/{city}', [MovementController::class, 'transport']);
+Route::delete('movement/{movement}', [MovementController::class, 'remove']);
 
-Route::get('world/{x}/{y}', 'Game\WorldController@index');
+Route::get('world/{x}/{y}', [WorldController::class, 'index']);
 
-Route::post('unit/{city}','Game\UnitController@create');
-Route::get('unit','Game\UnitController@index');
+Route::post('unit/{city}', [UnitController::class, 'create']);
+Route::get('unit', [UnitController::class, 'index']);
 
-Route::post('attack/{city}','Game\CombatController@attack');
-Route::post('defend/{city}','Game\CombatController@defend');
-Route::get('getWarReport','Game\CombatController@index');
+Route::post('attack/{city}', [CombatController::class, 'attack']);
+Route::post('defend/{city}', [CombatController::class, 'defend']);
+Route::get('getWarReport', [CombatController::class, 'index']);
 
-Route::post('chat/send','Game\ChatController@send');
+Route::post('chat/send', [ChatController::class, 'send']);

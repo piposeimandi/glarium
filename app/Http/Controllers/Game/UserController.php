@@ -11,7 +11,7 @@ use App\Models\UserResearch;
 use App\Models\UserResource;
 use App\Models\Message;
 use App\Models\City;
-use App\User;
+use App\Models\User;
 use App\Helpers\UserResourceHelper;
 use App\Helpers\CombatHelper;
 use App\Events\UserNotification;

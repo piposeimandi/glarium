@@ -2,7 +2,7 @@
 
 namespace App\Helpers;
 
-use App\User;
+use App\Models\User;
 use App\Models\City;
 use App\Models\UserCity;
 use App\Models\CityBuilding;

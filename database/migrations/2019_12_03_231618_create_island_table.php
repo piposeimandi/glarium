@@ -66,7 +66,12 @@ class CreateIslandTable extends Migration
             }
             return $retval;
         });
-        DB::table('island')->insert($array);
+        
+        // Insert in chunks to avoid SQLite variable limit
+        $chunks = array_chunk($array, 100);
+        foreach ($chunks as $chunk) {
+            DB::table('island')->insert($chunk);
+        }
     }
 
     /**

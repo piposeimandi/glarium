@@ -3,7 +3,7 @@
 namespace App\Policies;
 
 use App\Models\CityBuilding;
-use App\User;
+use App\Models\User;
 use App\Models\City;
 use App\Models\UserCity;
 use Illuminate\Auth\Access\HandlesAuthorization;
@@ -15,7 +15,7 @@ class CityBuildingPolicy
     /**
      * Determine whether the user can view any city buildings.
      *
-     * @param  \App\User  $user
+     * @param  \App\Models\User  $user
      * @return mixed
      */
     public function viewAny(User $user)
@@ -26,7 +26,7 @@ class CityBuildingPolicy
     /**
      * Determine whether the user can view the city building.
      *
-     * @param  \App\User  $user
+     * @param  \App\Models\User  $user
      * @param  \App\CityBuilding  $cityBuilding
      * @return mixed
      */
@@ -38,7 +38,7 @@ class CityBuildingPolicy
     /**
      * Determine whether the user can create city buildings.
      *
-     * @param  \App\User  $user
+     * @param  \App\Models\User  $user
      * @return mixed
      */
     public function create(User $user,City $city)
@@ -49,7 +49,7 @@ class CityBuildingPolicy
     /**
      * Determine whether the user can update the city building.
      *
-     * @param  \App\User  $user
+     * @param  \App\Models\User  $user
      * @param  \App\CityBuilding  $cityBuilding
      * @return mixed
      */
@@ -61,7 +61,7 @@ class CityBuildingPolicy
     /**
      * Determine whether the user can delete the city building.
      *
-     * @param  \App\User  $user
+     * @param  \App\Models\User  $user
      * @param  \App\CityBuilding  $cityBuilding
      * @return mixed
      */
@@ -73,7 +73,7 @@ class CityBuildingPolicy
     /**
      * Determine whether the user can restore the city building.
      *
-     * @param  \App\User  $user
+     * @param  \App\Models\User  $user
      * @param  \App\CityBuilding  $cityBuilding
      * @return mixed
      */
@@ -85,7 +85,7 @@ class CityBuildingPolicy
     /**
      * Determine whether the user can permanently delete the city building.
      *
-     * @param  \App\User  $user
+     * @param  \App\Models\User  $user
      * @param  \App\CityBuilding  $cityBuilding
      * @return mixed
      */

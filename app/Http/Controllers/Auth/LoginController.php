@@ -3,11 +3,12 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use App\Providers\RouteServiceProvider;
-use Illuminate\Foundation\Auth\AuthenticatesUsers;
-use App\Models\UserCity;
 use Illuminate\Http\Request;
-use Auth;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Validation\ValidationException;
+use App\Models\UserCity;
+use App\Helpers\OtherHelper;
 
 class LoginController extends Controller
 {
@@ -17,32 +18,72 @@ class LoginController extends Controller
     |--------------------------------------------------------------------------
     |
     | This controller handles authenticating users for the application and
-    | redirecting them to your home screen. The controller uses a trait
-    | to conveniently provide its functionality to your applications.
+    | redirecting them to your home screen.
     |
     */
 
-    use AuthenticatesUsers;
-
     /**
-     * Where to redirect users after login.
-     *
-     * @var string
+     * Handle a login request to the application.
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
-
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-
-    protected function authenticated(Request $request, $user)
+    public function login(Request $request)
     {
-        $city_id = $user->capital->city_id;
-        return redirect('/game/city/'.$city_id);
+        // Log the attempt for debugging
+        \Log::info('Login attempt', ['email' => $request->email]);
+        
+        $credentials = $request->validate([
+            'email' => ['required', 'email'],
+            'password' => ['required'],
+        ]);
+
+        if (Auth::attempt($credentials, $request->boolean('remember'))) {
+            $request->session()->regenerate();
+            
+            $user = Auth::user();
+            \Log::info('User authenticated', ['user_id' => $user->id]);
+            
+            // Try to get the user's capital city
+            $capital = $user->capital;
+            
+            if ($capital && $capital->city_id) {
+                \Log::info('User has capital', ['city_id' => $capital->city_id]);
+                return redirect('/game/city/' . $capital->city_id);
+            }
+            
+            // If no capital city, create one using OtherHelper
+            try {
+                \Log::info('Creating new city for user');
+                $cityId = OtherHelper::newPlayer($user);
+                \Log::info('New city created', ['city_id' => $cityId]);
+                return redirect('/game/city/' . $cityId)->with('message', '¡Bienvenido! Tu ciudad ha sido creada.');
+            } catch (\Exception $e) {
+                \Log::error('Error creating city', ['error' => $e->getMessage()]);
+                // If city creation fails, redirect to home with error
+                return redirect('/')->with('error', 'Error al crear tu ciudad. Contacta al administrador.');
+            }
+        }
+
+        \Log::warning('Login failed', ['email' => $request->email]);
+        
+        return back()->withErrors([
+            'email' => 'Las credenciales proporcionadas no coinciden con nuestros registros.',
+        ])->withInput($request->only('email'));
     }
 
+    /**
+     * Log the user out of the application.
+     */
+    public function logout(Request $request)
+    {
+        Auth::logout();
+
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect('/');
+    }
+    /**
+     * Create a new controller instance.
+     */
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
