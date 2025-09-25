@@ -14,11 +14,9 @@
             margin:0px
         }
     </style>
+    @vite(['resources/js/app.js'])
 </head>
 <body>
-    <div id="app">
-        <Game></Game>
-    </div>
-    <script src='/dist/main.js?v=1.0.0'></script>
+    <div id="app"></div>
 </body>
 </html>

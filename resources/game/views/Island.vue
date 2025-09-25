@@ -1,6 +1,6 @@
 <template>
 <div>
-  <div class="islandContainer" v-dragscroll="true" v-autoscroll="'center'">
+  <div class="islandContainer">
        <div id="zoom">
             <div class="ocean">
                 <div class="island">
@@ -14,8 +14,6 @@
 </template>
 
 <script>
-import { dragscroll } from 'vue-dragscroll'
-import { autoscroll } from 'vue-autoscroll'
 import $notification from 'Stores/notification'
 
 import axios from 'axios'
@@ -28,10 +26,6 @@ import $modal from 'Stores/modal'
 
 export default {
   name: 'Isla',
-  directives: {
-    dragscroll,
-    autoscroll
-  },
   components:{
     Cities,
     Resources

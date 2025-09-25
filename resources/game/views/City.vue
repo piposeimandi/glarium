@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="cityContainer" v-dragscroll="true" v-autoscroll="'top center'">
+    <div class="cityContainer">
         <div id="zoom">
             <div class="city">
                 <Edificios></Edificios>
@@ -11,26 +11,15 @@
 </template>
 
 <script>
-import { dragscroll } from 'vue-dragscroll'
-import { autoscroll } from 'vue-autoscroll'
-
 import Edificios from "Components/city/Edificios.vue";
-
-
 
 export default {
   name: "City",
-  directives: {
-    dragscroll,
-    autoscroll
-  },
   components:{
     Edificios,
   },
   mounted(){
       this.$zoom()
-
-
   }
 };
 </script>

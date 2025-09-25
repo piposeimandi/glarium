@@ -3,7 +3,7 @@
         <div class="ctitle">
             <div class="ctitle2">Chat</div>
         </div>
-        <div class="cbody p-2" v-chat-scroll>
+        <div class="cbody p-2">
             <div v-for="(item,index) in messages" :key="index" class="d-flex">
                 <div class="mr-2">
                     <div>{{item.name}}:</div>

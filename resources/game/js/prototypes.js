@@ -1,13 +1,13 @@
-
-import Vue from 'vue'
 import Panzoom from '@panzoom/panzoom'
 import moment from 'moment'
+
 /*
 String.prototype.capitalize = function (){
     return this.charAt(0).toUpperCase()+this.slice(1);
 }
 */
-Vue.prototype.$sectotime = function(secs){
+
+export function sectotime(secs){
   var minutes = Math.floor(secs / 60);
   secs = secs%60;
   var hours = Math.floor(minutes/60)
@@ -25,7 +25,7 @@ function pad(num) {
     return ("0"+num).slice(-2);
 }
 
-Vue.prototype.$sum = function (obj,prop){
+export function sum(obj, prop){
     var total = 0
     for ( var i = 0, _len = obj.length; i < _len; i++ ) {
         total += parseInt(obj[i][prop])
@@ -33,7 +33,7 @@ Vue.prototype.$sum = function (obj,prop){
     return total
 }
 
-Vue.prototype.$zoom = function (){
+export function zoom(){
     const elem = document.getElementById('zoom')
     var panzoom = Panzoom(elem, {
         disablePan:true,
@@ -51,7 +51,7 @@ Vue.prototype.$zoom = function (){
     elem.parentElement.addEventListener('wheel', panzoom.zoomWithWheel)
 }
 
-Vue.prototype.$checkHorarioTipo = function (movement){
+export function checkHorarioTipo(movement){
     if(checkMoment(movement.start_at)){
         return 1;
     }
@@ -62,6 +62,7 @@ Vue.prototype.$checkHorarioTipo = function (movement){
         return 3;
     }
 }
+
 function checkMoment(time){
     return moment(time) > moment()
 }
@@ -71,12 +72,14 @@ Number.prototype.money = function(n, x) {
   return this.toFixed(Math.max(0, ~~n)).replace(new RegExp(re, 'g'), '$&,');
 };
 
-Vue.prototype.$money = function (number){
+export function money(number){
   return number==undefined ? 0 : Math.floor(number).money();
 }
-Vue.prototype.$money_two = function (number){
+
+export function money_two(number){
   return number==undefined ? 0 : parseFloat(number).money(2);
 }
-Vue.prototype.$floor = function (number){
+
+export function floor(number){
   return number==undefined ? 0 : Math.floor(number);
 }
