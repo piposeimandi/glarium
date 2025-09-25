@@ -1,11 +1,8 @@
 //Tienda que tiene las configuraciones del juego
-import Vue from 'vue'
-import Vuex from 'vuex'
+import { createStore } from 'vuex'
 import axios from 'axios'
 
-Vue.use(Vuex)
-
-const store = new Vuex.Store({
+const store = createStore({
     state: {
         world:{},
         research:[],

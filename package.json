@@ -7,7 +7,9 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@vitejs/plugin-vue": "^5.1.4",
     "axios": "^1.7.4",
+    "interactjs": "^1.10.27",
     "laravel-vite-plugin": "^1.0.5",
     "lodash": "^4.17.21",
     "moment": "^2.30.1",
@@ -15,15 +17,15 @@
     "sass": "^1.77.8",
     "sweetalert2": "^11.12.4",
     "vite": "^5.4.2",
-    "vue": "^2.7.16",
+    "vue": "^3.4.0",
     "vue-autoscroll": "^1.2.1",
     "vue-chat-scroll": "^1.4.0",
     "vue-dragscroll": "^1.10.2",
-    "vue-i18n": "^8.28.2",
-    "vue-router": "^3.6.5",
+    "vue-i18n": "^9.14.5",
+    "vue-router": "^4.5.1",
     "vue-slider-component": "^3.2.24",
-    "vue-template-compiler": "^2.7.16",
-    "vuex": "^3.6.2"
+    "vue-table-dynamic": "^0.4.10",
+    "vuex": "^4.1.0"
   },
   "dependencies": {
     "@panzoom/panzoom": "^4.5.0",

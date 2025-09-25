@@ -1,13 +1,10 @@
 //Tienda que tiene las configuraciones de la ciudad
-import Vue from 'vue'
-import Vuex from 'vuex'
+import { createStore } from 'vuex'
 import $building from 'Stores/building'
 import $route from 'Js/router'
 import axios from 'axios'
 
-Vue.use(Vuex)
-
-export default new Vuex.Store({
+export default createStore({
     state: {
         city_id:0,
         city:{},

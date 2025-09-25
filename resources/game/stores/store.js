@@ -1,10 +1,7 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+import { createStore } from 'vuex'
 import moment from 'moment'
 
-Vue.use(Vuex)
-
-const store = new Vuex.Store({
+const store = createStore({
     state: {
       now: moment().format('YYYY-MM-DD HH:mm:ss'),
     },

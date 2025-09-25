@@ -27,9 +27,6 @@ class LoginController extends Controller
      */
     public function login(Request $request)
     {
-        // Log the attempt for debugging
-        \Log::info('Login attempt', ['email' => $request->email]);
-        
         $credentials = $request->validate([
             'email' => ['required', 'email'],
             'password' => ['required'],
@@ -39,31 +36,24 @@ class LoginController extends Controller
             $request->session()->regenerate();
             
             $user = Auth::user();
-            \Log::info('User authenticated', ['user_id' => $user->id]);
             
             // Try to get the user's capital city
             $capital = $user->capital;
             
             if ($capital && $capital->city_id) {
-                \Log::info('User has capital', ['city_id' => $capital->city_id]);
                 return redirect('/game/city/' . $capital->city_id);
             }
             
             // If no capital city, create one using OtherHelper
             try {
-                \Log::info('Creating new city for user');
                 $cityId = OtherHelper::newPlayer($user);
-                \Log::info('New city created', ['city_id' => $cityId]);
                 return redirect('/game/city/' . $cityId)->with('message', '¡Bienvenido! Tu ciudad ha sido creada.');
             } catch (\Exception $e) {
-                \Log::error('Error creating city', ['error' => $e->getMessage()]);
                 // If city creation fails, redirect to home with error
                 return redirect('/')->with('error', 'Error al crear tu ciudad. Contacta al administrador.');
             }
         }
 
-        \Log::warning('Login failed', ['email' => $request->email]);
-        
         return back()->withErrors([
             'email' => 'Las credenciales proporcionadas no coinciden con nuestros registros.',
         ])->withInput($request->only('email'));
@@ -86,6 +76,6 @@ class LoginController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest')->except('logout');
+        // $this->middleware('guest')->except('logout');
     }
 }

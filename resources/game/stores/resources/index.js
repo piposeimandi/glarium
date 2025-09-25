@@ -1,11 +1,8 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+import { createStore } from 'vuex'
 import Population from 'Stores/resources/population'
 import UserResources from 'Stores/resources/userResources'
 
-Vue.use(Vuex)
-
-export default new Vuex.Store({
+export default createStore({
     modules: {
         population: Population,
         userResources: UserResources

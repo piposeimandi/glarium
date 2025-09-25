@@ -1,0 +1,523 @@
+{
+  "resources/game/img/advisor/container.png": {
+    "file": "assets/container-BMyY7wAX.png",
+    "src": "resources/game/img/advisor/container.png"
+  },
+  "resources/game/img/advisor/diplomat.png": {
+    "file": "assets/diplomat-BLENNX77.png",
+    "src": "resources/game/img/advisor/diplomat.png"
+  },
+  "resources/game/img/advisor/diplomat_active.png": {
+    "file": "assets/diplomat_active-y5wu6YjZ.png",
+    "src": "resources/game/img/advisor/diplomat_active.png"
+  },
+  "resources/game/img/advisor/general.png": {
+    "file": "assets/general-DteiPWMr.png",
+    "src": "resources/game/img/advisor/general.png"
+  },
+  "resources/game/img/advisor/general_active.png": {
+    "file": "assets/general_active-D1J2ASxw.png",
+    "src": "resources/game/img/advisor/general_active.png"
+  },
+  "resources/game/img/advisor/mayor.png": {
+    "file": "assets/mayor-CiXqwtIG.png",
+    "src": "resources/game/img/advisor/mayor.png"
+  },
+  "resources/game/img/advisor/mayor_active.png": {
+    "file": "assets/mayor_active-dVBMv8ys.png",
+    "src": "resources/game/img/advisor/mayor_active.png"
+  },
+  "resources/game/img/advisor/scientist.png": {
+    "file": "assets/scientist-BNSIedvt.png",
+    "src": "resources/game/img/advisor/scientist.png"
+  },
+  "resources/game/img/advisor/scientist_active.png": {
+    "file": "assets/scientist_active-JV6rHH82.png",
+    "src": "resources/game/img/advisor/scientist_active.png"
+  },
+  "resources/game/img/ciudad/1.png": {
+    "file": "assets/1-PJfB_p0j.png",
+    "src": "resources/game/img/ciudad/1.png"
+  },
+  "resources/game/img/ciudad/10.png": {
+    "file": "assets/10-BHptiMA6.png",
+    "src": "resources/game/img/ciudad/10.png"
+  },
+  "resources/game/img/ciudad/11.png": {
+    "file": "assets/11-Bpy4U3io.png",
+    "src": "resources/game/img/ciudad/11.png"
+  },
+  "resources/game/img/ciudad/12.png": {
+    "file": "assets/12-DH9NbOwl.png",
+    "src": "resources/game/img/ciudad/12.png"
+  },
+  "resources/game/img/ciudad/13.png": {
+    "file": "assets/13-Cw95HIf5.png",
+    "src": "resources/game/img/ciudad/13.png"
+  },
+  "resources/game/img/ciudad/14.png": {
+    "file": "assets/14-BFTwVsMg.png",
+    "src": "resources/game/img/ciudad/14.png"
+  },
+  "resources/game/img/ciudad/15.png": {
+    "file": "assets/15-DFBU3Frb.png",
+    "src": "resources/game/img/ciudad/15.png"
+  },
+  "resources/game/img/ciudad/16.png": {
+    "file": "assets/16-A5L0dcbF.png",
+    "src": "resources/game/img/ciudad/16.png"
+  },
+  "resources/game/img/ciudad/17.png": {
+    "file": "assets/17-BU4gmCQd.png",
+    "src": "resources/game/img/ciudad/17.png"
+  },
+  "resources/game/img/ciudad/18.png": {
+    "file": "assets/18-CXNcvvTv.png",
+    "src": "resources/game/img/ciudad/18.png"
+  },
+  "resources/game/img/ciudad/19.png": {
+    "file": "assets/19-DxFJHVM4.png",
+    "src": "resources/game/img/ciudad/19.png"
+  },
+  "resources/game/img/ciudad/2.png": {
+    "file": "assets/2-ChDMsiTH.png",
+    "src": "resources/game/img/ciudad/2.png"
+  },
+  "resources/game/img/ciudad/3.png": {
+    "file": "assets/3-BIxZIWBF.png",
+    "src": "resources/game/img/ciudad/3.png"
+  },
+  "resources/game/img/ciudad/4.png": {
+    "file": "assets/4-jsE87taf.png",
+    "src": "resources/game/img/ciudad/4.png"
+  },
+  "resources/game/img/ciudad/5.png": {
+    "file": "assets/5-D9zV07cD.png",
+    "src": "resources/game/img/ciudad/5.png"
+  },
+  "resources/game/img/ciudad/6.png": {
+    "file": "assets/6-C3kaa084.png",
+    "src": "resources/game/img/ciudad/6.png"
+  },
+  "resources/game/img/ciudad/7.png": {
+    "file": "assets/7-7NJaKOK0.png",
+    "src": "resources/game/img/ciudad/7.png"
+  },
+  "resources/game/img/ciudad/8.png": {
+    "file": "assets/8-XBrMBYHF.png",
+    "src": "resources/game/img/ciudad/8.png"
+  },
+  "resources/game/img/ciudad/9.png": {
+    "file": "assets/9-D_TnAAEO.png",
+    "src": "resources/game/img/ciudad/9.png"
+  },
+  "resources/game/img/ciudad/city.jpg": {
+    "file": "assets/city-MJ2g6CyL.jpg",
+    "src": "resources/game/img/ciudad/city.jpg"
+  },
+  "resources/game/img/ciudad/construct.png": {
+    "file": "assets/construct-BvGsjfq2.png",
+    "src": "resources/game/img/ciudad/construct.png"
+  },
+  "resources/game/img/ciudad/terreno.png": {
+    "file": "assets/terreno-BN5epxr1.png",
+    "src": "resources/game/img/ciudad/terreno.png"
+  },
+  "resources/game/img/icon/action_point.png": {
+    "file": "assets/action_point-9xqgRB1O.png",
+    "src": "resources/game/img/icon/action_point.png"
+  },
+  "resources/game/img/icon/bg_lightviolet.png": {
+    "file": "assets/bg_lightviolet-e12CtzCs.png",
+    "src": "resources/game/img/icon/bg_lightviolet.png"
+  },
+  "resources/game/img/icon/bg_maincontentbox_footer.png": {
+    "file": "assets/bg_maincontentbox_footer-BZXn5Y17.png",
+    "src": "resources/game/img/icon/bg_maincontentbox_footer.png"
+  },
+  "resources/game/img/icon/bg_maincontentbox_left.png": {
+    "file": "assets/bg_maincontentbox_left-CT-22KMV.png",
+    "src": "resources/game/img/icon/bg_maincontentbox_left.png"
+  },
+  "resources/game/img/icon/bg_red.png": {
+    "file": "assets/bg_red-Crue2TjZ.png",
+    "src": "resources/game/img/icon/bg_red.png"
+  },
+  "resources/game/img/icon/bg_redblue.png": {
+    "file": "assets/bg_redblue-BjU91pxW.png",
+    "src": "resources/game/img/icon/bg_redblue.png"
+  },
+  "resources/game/img/icon/bg_violet.png": {
+    "file": "assets/bg_violet-Dbfu10_7.png",
+    "src": "resources/game/img/icon/bg_violet.png"
+  },
+  "resources/game/img/icon/bg_yellow.png": {
+    "file": "assets/bg_yellow-BhJnudm8.png",
+    "src": "resources/game/img/icon/bg_yellow.png"
+  },
+  "resources/game/img/icon/btn_city.png": {
+    "file": "assets/btn_city-Bh2ieHrL.png",
+    "src": "resources/game/img/icon/btn_city.png"
+  },
+  "resources/game/img/icon/btn_island.jpg": {
+    "file": "assets/btn_island-BKyhhDRj.jpg",
+    "src": "resources/game/img/icon/btn_island.jpg"
+  },
+  "resources/game/img/icon/btn_max.png": {
+    "file": "assets/btn_max-C0ieRYUN.png",
+    "src": "resources/game/img/icon/btn_max.png"
+  },
+  "resources/game/img/icon/btn_min.png": {
+    "file": "assets/btn_min-O4USNCWL.png",
+    "src": "resources/game/img/icon/btn_min.png"
+  },
+  "resources/game/img/icon/btn_world.png": {
+    "file": "assets/btn_world-DZlu4mFv.png",
+    "src": "resources/game/img/icon/btn_world.png"
+  },
+  "resources/game/img/icon/bubble_green.png": {
+    "file": "assets/bubble_green-BzuSNfem.png",
+    "src": "resources/game/img/icon/bubble_green.png"
+  },
+  "resources/game/img/icon/bubble_red.png": {
+    "file": "assets/bubble_red-DRZr4HEh.png",
+    "src": "resources/game/img/icon/bubble_red.png"
+  },
+  "resources/game/img/icon/check_mark.png": {
+    "file": "assets/check_mark-BKKLUeKj.png",
+    "src": "resources/game/img/icon/check_mark.png"
+  },
+  "resources/game/img/icon/close-hover.png": {
+    "file": "assets/close-hover-Ds3Eppm6.png",
+    "src": "resources/game/img/icon/close-hover.png"
+  },
+  "resources/game/img/icon/close.png": {
+    "file": "assets/close-RxyVuVUo.png",
+    "src": "resources/game/img/icon/close.png"
+  },
+  "resources/game/img/icon/cross.png": {
+    "file": "assets/cross-BTRgCMtE.png",
+    "src": "resources/game/img/icon/cross.png"
+  },
+  "resources/game/img/icon/fondo.jpg": {
+    "file": "assets/fondo-DH-3jVeV.jpg",
+    "src": "resources/game/img/icon/fondo.jpg"
+  },
+  "resources/game/img/icon/gold.jpg": {
+    "file": "assets/gold-BbEKWG2Z.jpg",
+    "src": "resources/game/img/icon/gold.jpg"
+  },
+  "resources/game/img/icon/header_bg.jpg": {
+    "file": "assets/header_bg-DKdjZCWC.jpg",
+    "src": "resources/game/img/icon/header_bg.jpg"
+  },
+  "resources/game/img/icon/icon_glass.png": {
+    "file": "assets/icon_glass-BwumfAbm.png",
+    "src": "resources/game/img/icon/icon_glass.png"
+  },
+  "resources/game/img/icon/icon_marble.png": {
+    "file": "assets/icon_marble-Dl7ovko3.png",
+    "src": "resources/game/img/icon/icon_marble.png"
+  },
+  "resources/game/img/icon/icon_sulfur.png": {
+    "file": "assets/icon_sulfur-P3h49bDa.png",
+    "src": "resources/game/img/icon/icon_sulfur.png"
+  },
+  "resources/game/img/icon/icon_wine.png": {
+    "file": "assets/icon_wine-Bc0evlJZ.png",
+    "src": "resources/game/img/icon/icon_wine.png"
+  },
+  "resources/game/img/icon/lightbrown.png": {
+    "file": "assets/lightbrown-CVzY_-J_.png",
+    "src": "resources/game/img/icon/lightbrown.png"
+  },
+  "resources/game/img/icon/lightgreen.png": {
+    "file": "assets/lightgreen-DrtM4qIf.png",
+    "src": "resources/game/img/icon/lightgreen.png"
+  },
+  "resources/game/img/icon/modal_header.jpg": {
+    "file": "assets/modal_header-DzzmMAKZ.jpg",
+    "src": "resources/game/img/icon/modal_header.jpg"
+  },
+  "resources/game/img/icon/msg.png": {
+    "file": "assets/msg-DlmiOZjh.png",
+    "src": "resources/game/img/icon/msg.png"
+  },
+  "resources/game/img/icon/navegacion_fondo.png": {
+    "file": "assets/navegacion_fondo-DxFl7dnl.png",
+    "src": "resources/game/img/icon/navegacion_fondo.png"
+  },
+  "resources/game/img/icon/navigation-footer.jpg": {
+    "file": "assets/navigation-footer-DqudOQUA.jpg",
+    "src": "resources/game/img/icon/navigation-footer.jpg"
+  },
+  "resources/game/img/icon/navigation-other.jpg": {
+    "file": "assets/navigation-other-C83wArB4.jpg",
+    "src": "resources/game/img/icon/navigation-other.jpg"
+  },
+  "resources/game/img/icon/navigation-selected.jpg": {
+    "file": "assets/navigation-selected-Bo4B10GQ.jpg",
+    "src": "resources/game/img/icon/navigation-selected.jpg"
+  },
+  "resources/game/img/icon/population.png": {
+    "file": "assets/population-CWtoQxaO.png",
+    "src": "resources/game/img/icon/population.png"
+  },
+  "resources/game/img/icon/premium.png": {
+    "file": "assets/premium-BA6XmlXk.png",
+    "src": "resources/game/img/icon/premium.png"
+  },
+  "resources/game/img/icon/schriftrolle_closed.png": {
+    "file": "assets/schriftrolle_closed-B5dZHyIS.png",
+    "src": "resources/game/img/icon/schriftrolle_closed.png"
+  },
+  "resources/game/img/icon/schriftrolle_offen.png": {
+    "file": "assets/schriftrolle_offen-BjkswsEO.png",
+    "src": "resources/game/img/icon/schriftrolle_offen.png"
+  },
+  "resources/game/img/icon/scroll_bg.png": {
+    "file": "assets/scroll_bg-Ct4ZNpWg.png",
+    "src": "resources/game/img/icon/scroll_bg.png"
+  },
+  "resources/game/img/icon/scroll_mid.png": {
+    "file": "assets/scroll_mid-sWni4xJV.png",
+    "src": "resources/game/img/icon/scroll_mid.png"
+  },
+  "resources/game/img/icon/ships.jpg": {
+    "file": "assets/ships-BIHCwGkN.jpg",
+    "src": "resources/game/img/icon/ships.jpg"
+  },
+  "resources/game/img/island/0.jpg": {
+    "file": "assets/0-BpSFBBna.jpg",
+    "src": "resources/game/img/island/0.jpg"
+  },
+  "resources/game/img/island/attack.jpg": {
+    "file": "assets/attack-DxrVm9mI.jpg",
+    "src": "resources/game/img/island/attack.jpg"
+  },
+  "resources/game/img/island/city_blue.png": {
+    "file": "assets/city_blue-CkrnCIIQ.png",
+    "src": "resources/game/img/island/city_blue.png"
+  },
+  "resources/game/img/island/city_blue_hover.png": {
+    "file": "assets/city_blue_hover-D3np2HJD.png",
+    "src": "resources/game/img/island/city_blue_hover.png"
+  },
+  "resources/game/img/island/city_constr.png": {
+    "file": "assets/city_constr-BOLRKmwn.png",
+    "src": "resources/game/img/island/city_constr.png"
+  },
+  "resources/game/img/island/city_red.png": {
+    "file": "assets/city_red-DIwTEDVF.png",
+    "src": "resources/game/img/island/city_red.png"
+  },
+  "resources/game/img/island/city_red_hover.png": {
+    "file": "assets/city_red_hover-uu1NoUdQ.png",
+    "src": "resources/game/img/island/city_red_hover.png"
+  },
+  "resources/game/img/island/defend.jpg": {
+    "file": "assets/defend-5kUm4Ejl.jpg",
+    "src": "resources/game/img/island/defend.jpg"
+  },
+  "resources/game/img/island/diplomacy.jpg": {
+    "file": "assets/diplomacy-NLUQUZ4J.jpg",
+    "src": "resources/game/img/island/diplomacy.jpg"
+  },
+  "resources/game/img/island/flag.png": {
+    "file": "assets/flag-D_vbleJx.png",
+    "src": "resources/game/img/island/flag.png"
+  },
+  "resources/game/img/island/forest.png": {
+    "file": "assets/forest-qfwzH1K6.png",
+    "src": "resources/game/img/island/forest.png"
+  },
+  "resources/game/img/island/forest_active.png": {
+    "file": "assets/forest_active-ByI2v3F3.png",
+    "src": "resources/game/img/island/forest_active.png"
+  },
+  "resources/game/img/island/name1.png": {
+    "file": "assets/name1-B7Jgna3N.png",
+    "src": "resources/game/img/island/name1.png"
+  },
+  "resources/game/img/island/name2.png": {
+    "file": "assets/name2-CdmWxLmU.png",
+    "src": "resources/game/img/island/name2.png"
+  },
+  "resources/game/img/island/name3.png": {
+    "file": "assets/name3-DNCh84KP.png",
+    "src": "resources/game/img/island/name3.png"
+  },
+  "resources/game/img/island/ocean.jpg": {
+    "file": "assets/ocean-X0hii2jZ.jpg",
+    "src": "resources/game/img/island/ocean.jpg"
+  },
+  "resources/game/img/island/resource_1.png": {
+    "file": "assets/resource_1-BgCziiTi.png",
+    "src": "resources/game/img/island/resource_1.png"
+  },
+  "resources/game/img/island/resource_1_active.png": {
+    "file": "assets/resource_1_active-Bw5guWrx.png",
+    "src": "resources/game/img/island/resource_1_active.png"
+  },
+  "resources/game/img/island/resource_2.png": {
+    "file": "assets/resource_2-TWiVOABG.png",
+    "src": "resources/game/img/island/resource_2.png"
+  },
+  "resources/game/img/island/resource_2_active.png": {
+    "file": "assets/resource_2_active-QFJr8hlK.png",
+    "src": "resources/game/img/island/resource_2_active.png"
+  },
+  "resources/game/img/island/resource_3.png": {
+    "file": "assets/resource_3-BZ3-IHzB.png",
+    "src": "resources/game/img/island/resource_3.png"
+  },
+  "resources/game/img/island/resource_3_active.png": {
+    "file": "assets/resource_3_active-B3mvBjW_.png",
+    "src": "resources/game/img/island/resource_3_active.png"
+  },
+  "resources/game/img/island/resource_4.png": {
+    "file": "assets/resource_4-l1-922Uz.png",
+    "src": "resources/game/img/island/resource_4.png"
+  },
+  "resources/game/img/island/resource_4_active.png": {
+    "file": "assets/resource_4_active-VSDAqZwe.png",
+    "src": "resources/game/img/island/resource_4_active.png"
+  },
+  "resources/game/img/island/transport.jpg": {
+    "file": "assets/transport-DuEigYmT.jpg",
+    "src": "resources/game/img/island/transport.jpg"
+  },
+  "resources/game/img/unit/units_mini.png": {
+    "file": "assets/units_mini-ztpYKFoI.png",
+    "src": "resources/game/img/unit/units_mini.png"
+  },
+  "resources/game/img/world/island.png": {
+    "file": "assets/island-WK7eZ2bx.png",
+    "src": "resources/game/img/world/island.png"
+  },
+  "resources/game/img/world/island_active.png": {
+    "file": "assets/island_active-DxiMmg2d.png",
+    "src": "resources/game/img/world/island_active.png"
+  },
+  "resources/game/img/world/ocean.png": {
+    "file": "assets/ocean-B3nL2a8G.png",
+    "src": "resources/game/img/world/ocean.png"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-1dvpJkEX.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true,
+    "css": [
+      "assets/app-Brka6oXF.css"
+    ],
+    "assets": [
+      "assets/1-PJfB_p0j.png",
+      "assets/2-ChDMsiTH.png",
+      "assets/3-BIxZIWBF.png",
+      "assets/4-jsE87taf.png",
+      "assets/5-D9zV07cD.png",
+      "assets/6-C3kaa084.png",
+      "assets/7-7NJaKOK0.png",
+      "assets/8-XBrMBYHF.png",
+      "assets/9-D_TnAAEO.png",
+      "assets/10-BHptiMA6.png",
+      "assets/11-Bpy4U3io.png",
+      "assets/12-DH9NbOwl.png",
+      "assets/13-Cw95HIf5.png",
+      "assets/14-BFTwVsMg.png",
+      "assets/15-DFBU3Frb.png",
+      "assets/16-A5L0dcbF.png",
+      "assets/17-BU4gmCQd.png",
+      "assets/18-CXNcvvTv.png",
+      "assets/19-DxFJHVM4.png",
+      "assets/construct-BvGsjfq2.png",
+      "assets/terreno-BN5epxr1.png",
+      "assets/city-MJ2g6CyL.jpg",
+      "assets/city_blue-CkrnCIIQ.png",
+      "assets/city_red-DIwTEDVF.png",
+      "assets/city_blue_hover-D3np2HJD.png",
+      "assets/city_red_hover-uu1NoUdQ.png",
+      "assets/city_constr-BOLRKmwn.png",
+      "assets/flag-D_vbleJx.png",
+      "assets/forest-qfwzH1K6.png",
+      "assets/forest_active-ByI2v3F3.png",
+      "assets/resource_1-BgCziiTi.png",
+      "assets/resource_1_active-Bw5guWrx.png",
+      "assets/resource_2-TWiVOABG.png",
+      "assets/resource_2_active-QFJr8hlK.png",
+      "assets/resource_3-BZ3-IHzB.png",
+      "assets/resource_3_active-B3mvBjW_.png",
+      "assets/resource_4-l1-922Uz.png",
+      "assets/resource_4_active-VSDAqZwe.png",
+      "assets/ocean-X0hii2jZ.jpg",
+      "assets/0-BpSFBBna.jpg",
+      "assets/island-WK7eZ2bx.png",
+      "assets/island_active-DxiMmg2d.png",
+      "assets/icon_wine-Bc0evlJZ.png",
+      "assets/icon_marble-Dl7ovko3.png",
+      "assets/icon_glass-BwumfAbm.png",
+      "assets/icon_sulfur-P3h49bDa.png",
+      "assets/ocean-B3nL2a8G.png",
+      "assets/bubble_red-DRZr4HEh.png",
+      "assets/bubble_green-BzuSNfem.png",
+      "assets/cross-BTRgCMtE.png",
+      "assets/check_mark-BKKLUeKj.png",
+      "assets/container-BMyY7wAX.png",
+      "assets/mayor-CiXqwtIG.png",
+      "assets/general-DteiPWMr.png",
+      "assets/scientist-BNSIedvt.png",
+      "assets/diplomat-BLENNX77.png",
+      "assets/mayor_active-dVBMv8ys.png",
+      "assets/general_active-D1J2ASxw.png",
+      "assets/scientist_active-JV6rHH82.png",
+      "assets/diplomat_active-y5wu6YjZ.png",
+      "assets/population-CWtoQxaO.png",
+      "assets/action_point-9xqgRB1O.png",
+      "assets/navigation-selected-Bo4B10GQ.jpg",
+      "assets/navigation-other-C83wArB4.jpg",
+      "assets/navigation-footer-DqudOQUA.jpg",
+      "assets/btn_world-DZlu4mFv.png",
+      "assets/btn_island-BKyhhDRj.jpg",
+      "assets/btn_city-Bh2ieHrL.png",
+      "assets/ships-BIHCwGkN.jpg",
+      "assets/gold-BbEKWG2Z.jpg",
+      "assets/premium-BA6XmlXk.png",
+      "assets/navegacion_fondo-DxFl7dnl.png",
+      "assets/header_bg-DKdjZCWC.jpg",
+      "assets/bg_maincontentbox_left-CT-22KMV.png",
+      "assets/modal_header-DzzmMAKZ.jpg",
+      "assets/bg_maincontentbox_footer-BZXn5Y17.png",
+      "assets/scroll_bg-Ct4ZNpWg.png",
+      "assets/scroll_mid-sWni4xJV.png",
+      "assets/btn_min-O4USNCWL.png",
+      "assets/btn_max-C0ieRYUN.png",
+      "assets/bg_red-Crue2TjZ.png",
+      "assets/bg_lightviolet-e12CtzCs.png",
+      "assets/bg_yellow-BhJnudm8.png",
+      "assets/bg_violet-Dbfu10_7.png",
+      "assets/bg_redblue-BjU91pxW.png",
+      "assets/lightbrown-CVzY_-J_.png",
+      "assets/lightgreen-DrtM4qIf.png",
+      "assets/units_mini-ztpYKFoI.png",
+      "assets/transport-DuEigYmT.jpg",
+      "assets/diplomacy-NLUQUZ4J.jpg",
+      "assets/defend-5kUm4Ejl.jpg",
+      "assets/attack-DxrVm9mI.jpg",
+      "assets/msg-DlmiOZjh.png",
+      "assets/schriftrolle_closed-B5dZHyIS.png",
+      "assets/schriftrolle_offen-BjkswsEO.png",
+      "assets/fondo-DH-3jVeV.jpg",
+      "assets/close-RxyVuVUo.png",
+      "assets/close-hover-Ds3Eppm6.png",
+      "assets/name1-B7Jgna3N.png",
+      "assets/name2-CdmWxLmU.png",
+      "assets/name3-DNCh84KP.png"
+    ]
+  },
+  "resources/sass/app.scss": {
+    "file": "assets/app-DCQmKd3y.css",
+    "src": "resources/sass/app.scss",
+    "isEntry": true
+  }
+}

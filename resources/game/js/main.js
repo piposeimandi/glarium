@@ -1,22 +1,15 @@
 require('Js/config')
 require('Js/prototypes')
 
-import Vue from 'vue'
+import { createApp } from 'vue'
 import Game from 'Js/Game.vue'
 import i18n  from 'Lang/index.js'
+import store from 'Stores/store.js'
 
-import "bootstrap-css-only";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "Sass/main.scss"
 
-
-
-
-
-new Vue({
-    el:'#app',
-    i18n,
-    name:'App',
-    components:{
-        Game
-    }
-});
+const app = createApp(Game)
+app.use(i18n)
+app.use(store)
+app.mount('#app')

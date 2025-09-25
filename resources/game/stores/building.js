@@ -1,6 +1,5 @@
 //Tienda que tiene los edificios de una ciudad
-import Vue from 'vue'
-import Vuex from 'vuex'
+import { createStore } from 'vuex'
 import axios from 'axios'
 import $store from 'Stores/store'
 import $city from 'Stores/city'
@@ -10,9 +9,7 @@ import $resources from 'Stores/resources'
 import $modal from 'Stores/modal'
 import moment from "moment";
 
-Vue.use(Vuex)
-
-const store = new Vuex.Store({
+const store = createStore({
     state: {
         buildings:[],
     },
