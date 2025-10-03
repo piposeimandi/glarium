@@ -3,7 +3,7 @@
         <div class="ctitle">
             <div class="ctitle2">Chat</div>
         </div>
-        <div class="cbody p-2">
+        <div class="cbody p-2" v-autoscroll>
             <div v-for="(item,index) in messages" :key="index" class="d-flex">
                 <div class="mr-2">
                     <div>{{item.name}}:</div>
@@ -23,9 +23,13 @@
 
 <script>
 import axios from 'axios'
+import { autoscroll } from 'vue-autoscroll'
 
 export default {
     name: 'Chat',
+    directives: {
+        autoscroll
+    },
     data() {
         return {
             messages:[{name:'admin',message:'Bienvenido a Glarium!',time:'00:00'}],

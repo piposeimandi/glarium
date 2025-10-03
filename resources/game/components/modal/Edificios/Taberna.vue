@@ -16,7 +16,7 @@
                 </div>
                 <div class="d-flex my-3">
                     <div class="flex-1 min" @click='setMin'></div>
-                    <div class="flex-10"><vue-slider :interval='12*bonus_tavern_consume' ref="slider" :height='16' silent :max='max' v-model="value"></vue-slider></div>
+                    <div class="flex-10"><vue-slider :step='12*bonus_tavern_consume' ref="slider" :max='max' v-model="value" /></div>
                     <div class="flex-1 max" @click='setMax'></div>
                 </div>
                 <div class="d-flex justify-content-center">
@@ -40,7 +40,7 @@
 
 <script>
 import axios from 'axios'
-import VueSlider from 'vue-slider-component'
+import VueSlider from '@vueform/slider'
 import $resources from 'Stores/resources'
 import $city from 'Stores/city'
 import $config from 'Stores/config'
@@ -60,10 +60,10 @@ export default {
     },
     methods:{
         setMin(){
-            this.$refs.slider.setValue(0)
+            this.value = 0
         },
         setMax(){
-            this.$refs.slider.setValue(this.max)
+            this.value = this.max
         },
         confirmar(){
             axios.post('city/setWine/'+this.city_id,{

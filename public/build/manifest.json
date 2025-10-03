@@ -404,12 +404,12 @@
     "src": "resources/game/img/world/ocean.png"
   },
   "resources/js/app.js": {
-    "file": "assets/app-CbWxp_x-.js",
+    "file": "assets/app-BoRJbZeT.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
     "css": [
-      "assets/app-BdLcEsn3.css"
+      "assets/app-BcKZ73Xf.css"
     ],
     "assets": [
       "assets/1-PJfB_p0j.png",

@@ -20,7 +20,7 @@
                 </div>
                 <div class="d-flex my-3">
                     <div class="flex-1 min" @click='setMin'></div>
-                    <div class="flex-10"><vue-slider ref="slider" :height='16' silent :max='max' v-model="value"></vue-slider></div>
+                    <div class="flex-10"><vue-slider ref="slider" :max="max" v-model="value" /></div>
                     <div class="flex-1 max" @click='setMax'></div>
                 </div>
                 <div class="d-flex justify-content-center">
@@ -39,16 +39,32 @@
         </div>
          <div>
             <div class="gtitle mt-5 mb-3 text-center">{{$t('island.islandCities')}}</div>
-            <vue-table-dynamic :params="params"></vue-table-dynamic>
+                <div v-if="params.data && params.data.length">
+                    <table class="table-simple w-100">
+                        <thead v-if="Array.isArray(params.data[0])">
+                            <tr>
+                                <th v-for="(h, hi) in params.data[0]" :key="'h'+hi">{{ h }}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="(row, ri) in tableBody" :key="'r'+ri">
+                                <template v-if="Array.isArray(row)">
+                                    <td v-for="(col, ci) in row" :key="'c'+ri+'-'+ci">{{ col }}</td>
+                                </template>
+                                <template v-else>
+                                    <td colspan="99">{{ row }}</td>
+                                </template>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
         </div>
     </div>
 </template>
 
 <script>
 import axios from 'axios'
-import VueSlider from 'vue-slider-component'
-import VueTableDynamic from 'vue-table-dynamic'
-import 'vue-slider-component/theme/default.css'
+import VueSlider from '@vueform/slider'
 import $resources from 'Stores/resources'
 import $city from 'Stores/city'
 import $notification from 'Stores/notification'
@@ -58,8 +74,7 @@ export default {
     name:'IslandResources',
     props:['data'],
     components: {
-        VueSlider,
-        VueTableDynamic
+        VueSlider
     },
     data(){
         return {
@@ -76,10 +91,10 @@ export default {
     },
     methods:{
         setMin(){
-            this.$refs.slider.setValue(0)
+            this.value = 0
         },
         setMax(){
-            this.$refs.slider.setValue(this.max)
+            this.value = this.max
         },
         confirmar(){
             axios.post('island/setWorker/'+this.city_id,{
@@ -160,6 +175,10 @@ export default {
         }
     },
     computed:{
+        tableBody(){
+            if(!this.params?.data?.length) return [];
+            return Array.isArray(this.params.data[0]) ? this.params.data.slice(1) : this.params.data;
+        },
         corruption(){
             return 1 - $city.getters.getCorruption;
         },

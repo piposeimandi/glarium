@@ -3,7 +3,7 @@
         <div class="celda" v-for='i in resources' :key='i'>
             <div class="flex-4 celda mr-3">
                 <div class="mr-3"><img :src="require('Img/icon/'+geticon(i))"></div>
-                <div class="flex-1"><vue-slider v-on:change='cambiar($event,i)' :disabled='getDisable(i)' :ref="'slider_'+(i)" :height='16' silent :max='getMax(i)' v-model="values[i]"></vue-slider></div>
+                <div class="flex-1"><vue-slider @change='cambiar($event,i)' :disabled='getDisable(i)' :ref="'slider_'+(i)" :max='getMax(i)' v-model="values[i]" /></div>
             </div>
             <div class="flex-2 d-flex">
                 <div class="flex-1">
@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import VueSlider from 'vue-slider-component'
+import VueSlider from '@vueform/slider'
 import $resources from 'Stores/resources'
 import $config from 'Stores/config'
 
@@ -120,7 +120,7 @@ export default {
             n = n<0 ? 0 : n
             this.values2[i] = n
             this.values[i] = n
-            this.$refs['slider_'+i][0].setValue(n)
+            // @vueform/slider usa v-model, actualizamos el modelo y Vue re-renderiza
             input.value = n
         },
         minimo(i){
@@ -128,13 +128,13 @@ export default {
             n = n<0 ? 0 : n
             this.values2[i] = n
             this.values[i] = n
-            this.$refs['slider_'+i][0].setValue(n)
+            // actualizamos solo los valores
         },
         maximo(i){
             var n =  this.values[i] + 500;
             this.values2[i] = n
             this.values[i] = n
-            this.$refs['slider_'+i][0].setValue(n)
+            // actualizamos solo los valores
         }
     },
     computed:{
@@ -178,13 +178,13 @@ export default {
                 var value = parseInt(this.values[i]);
                 if(isNaN(value)){
                     this.values[i] = 0
-                    this.$refs['slider_'+i][0].setValue(0)
+                    // sincroniza por v-model
                 }else{
                     var max = this.getMax(i);
                     if(value>max&&max>=0){
                         this.values[i] = max
                         this.values2[i] = max
-                        this.$refs['slider_'+i][0].setValue(max)
+                        // sincroniza por v-model
                     }
                 }
             }
