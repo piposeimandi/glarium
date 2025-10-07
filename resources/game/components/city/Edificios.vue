@@ -7,14 +7,14 @@
         </div>
     </div>
 
-    <div v-for="building in buildings" :key="'build_'+building.building_id">
+    <div v-for="building in buildings" :key="'build_'+(building.building_id || 'default')">
 
         <div class="object" :style="{ top: objects[building.position].top + 'px', left: objects[building.position].left + 'px' }">
             <div
             class="building d-flex justify-content-center"
-            :class="[building.constructed_at != null ? 'construct' : '','building_' + building.building_id]"
+            :class="[building.constructed_at != null ? 'construct' : '', 'building_' + (building.building_id || 'default')]"
             @click="modalEdificio(building)"
-            :title="$t(`buildings[${building.building_id}].name`) +' (' +building.level +')'"
+            :title="$t(`buildings[${building.building_id || 1}].name`) +' (' +(building.level || 0) +')'"
             >
                 <div class="valores" v-if="building.constructed_at != null" >{{ getConstructedTime(building.constructed_at) }}</div>
             </div>
@@ -94,18 +94,25 @@ export default {
         });
     },
     modalEdificio(building){
+      if (!building.building_id) {
+        console.warn("building_id está indefinido, usando valor predeterminado.");
+        building.building_id = 1; // Valor predeterminado
+      }
+      console.log("Edificio seleccionado:", building);
       axios
         .post("building/nextLevel/" + building.building_id, {
-          level: building.level
+          level: building.level || 0
         })
         .then(res => {
-          res.data.city_building_id = building.id
-           $modal.commit('openModal',{
+          console.log("Respuesta del servidor:", res.data);
+          res.data.city_building_id = building.id;
+          $modal.commit('openModal',{
             type:1,
             info:res.data
-          })
+          });
         })
         .catch(err => {
+          console.error("Error al abrir el modal del edificio:", err);
           $notification.commit('show',{advisor:1,type:false,message:err});
         });
     },
@@ -115,10 +122,24 @@ export default {
       return $store.state.now;
     },
     city_id() {
+      console.log("city_id:", $city.state.city_id);
       return $city.state.city_id;
     },
     buildings(){
-      return $building.getters.getBuildings
+      const buildings = $building.getters.getBuildings;
+      console.log("buildings:", buildings);
+      if (buildings.length === 0) {
+        console.warn("No hay edificios, cargando el edificio inicial.");
+        return [
+          {
+            building_id: 1,
+            position: 0,
+            level: 1,
+            constructed_at: null
+          }
+        ];
+      }
+      return buildings;
     }
   },
   watch: {
