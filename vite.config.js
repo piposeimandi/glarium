@@ -11,6 +11,25 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    css: {
+        preprocessorOptions: {
+            scss: {
+                quietDeps: true,
+                logger: {
+                    warn: (message, options) => {
+                        // Silenciar advertencias específicas de Bootstrap
+                        if (message.includes('@import rules are deprecated') ||
+                            message.includes('Global built-in functions are deprecated') ||
+                            message.includes('color-functions') ||
+                            message.includes('legacy-js-api')) {
+                            return;
+                        }
+                        console.warn(message);
+                    }
+                }
+            }
+        }
+    },
     resolve: {
         alias: {
             vue: 'vue/dist/vue.esm-bundler.js',

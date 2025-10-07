@@ -29,11 +29,11 @@
         <div>
             <div class="mb-2">
                 <div class="d-inline-block next" title="Ultimos 10 mensajes" @click='nextPage(false)' v-if='page>1'>
-                    ...últimos 10 <img :src="require('Img/icon/btn_min.png')">
+                    ...últimos 10 <img :src="getImg('btn_min.png')">
                 </div>
                 <div class="d-inline-block">{{(((page-1)*10)+1)}} - {{(((page-1)*10)+data.length)}}</div>
                 <div class="d-inline-block next" title="Próximos 10 mensajes" @click='nextPage(true)' v-if='more'>
-                    <img :src="require('Img/icon/btn_max.png')"> próximos 10...
+                    <img :src="getImg('btn_max.png')"> próximos 10...
                 </div>
             </div>
             <div class="mb-2">
@@ -63,6 +63,9 @@ export default {
     name:'ListaMensajes',
     props:['data','type','remove','read','page','more','nextPage'],
     methods:{
+        getImg(name) {
+            return new URL(`@/resources/game/img/icon/${name}`, import.meta.url).href;
+        },
         goTo(msg){
             $city.dispatch('focusCity',{island_id:msg.city.island_id,city_id:msg.city.id})
         },

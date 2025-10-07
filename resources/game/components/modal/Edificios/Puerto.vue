@@ -3,7 +3,7 @@
         <div class="gtitle text-center">{{$t('building.port.speedTitle')}}</div>
         <div>{{$t('building.port.speedText')}}</div>
         <div class="d-flex justify-content-center mt-3">
-            <div><img class="puerto" :src="require('Img/ciudad/16.png')"></div>
+            <div><img class="puerto" :src="getImg('ciudad/16.png')"></div>
             <div>{{speed}} {{$t('building.port.speedMin')}}</div>
         </div>
 
@@ -11,12 +11,12 @@
         <div>{{$t('building.port.tradeShipBuyText')}}</div>
         <div class="d-flex justify-content-center">
             <div class="d-flex justify-content-center position-relative">
-                <div class="mb-2"><img :src="require('Img/icon/ship_transport.png')"></div>
+                <div class="mb-2"><img :src="getImg('icon/ship_transport.png')"></div>
                 <div class="valores">{{trade_ship}}/180</div>
             </div>
             <div class="d-flex align-items-center">
                 <div class="text-center">
-                    <div class="text-center mb-2">{{$t('other.cost')}}: <img :src="require('Img/icon/icon_gold.png')"> {{$money(goldCost)}}</div>
+                    <div class="text-center mb-2">{{$t('other.cost')}}: <img :src="getImg('icon/icon_gold.png')"> {{$money(goldCost)}}</div>
                     <div v-if='gold>goldCost' class="btnGeneral py-2 px-3" @click='comprar'>{{$t('building.port.tradeShipBuyBtn')}}</div>
                     <div v-else class="text-danger">
                         <div>{{$t('building.port.tradeShipBuyMissing1')}}</div>
@@ -38,6 +38,9 @@ export default {
     name: 'Puerto',
     props:['data'],
     methods:{
+        getImg(name) {
+            return new URL(`@/resources/game/img/${name}`, import.meta.url).href;
+        },
         comprar(){
             axios.post('user/buyTradeShip')
             .then(res =>{

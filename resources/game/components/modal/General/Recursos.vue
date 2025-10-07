@@ -7,31 +7,31 @@
             </div>
             <div class="d-flex">
                 <div class="dt_item px-0">
-                    <div class="mb-1 my-1"><img class="ship" :src="require('Img/icon/ship_transport.png')"></div>
+                    <div class="mb-1 my-1"><img class="ship" :src="getImg('icon/ship_transport.png')"></div>
                     <div>{{movement.trade_ship}}</div>
                 </div>
                 <div class="dt_item" v-if="movement.resources.wood>0">
-                    <div class="dt_resource"><img :src="require('Img/icon/icon_wood.png')"></div>
+                    <div class="dt_resource"><img :src="getImg('icon/icon_wood.png')"></div>
                     <div>{{$money(movement.resources.wood)}}</div>
                 </div>
                 <div class="dt_item" v-if="movement.resources.wine>0">
-                    <div class="dt_resource"><img :src="require('Img/icon/icon_wine.png')"></div>
+                    <div class="dt_resource"><img :src="getImg('icon/icon_wine.png')"></div>
                     <div>{{$money(movement.resources.wine)}}</div>
                 </div>
                 <div class="dt_item" v-if="movement.resources.marble>0">
-                    <div class="dt_resource"><img :src="require('Img/icon/icon_marble.png')"></div>
+                    <div class="dt_resource"><img :src="getImg('icon/icon_marble.png')"></div>
                     <div>{{$money(movement.resources.marble)}}</div>
                 </div>
                 <div class="dt_item" v-if="movement.resources.glass>0">
-                    <div class="dt_resource"><img :src="require('Img/icon/icon_glass.png')"></div>
+                    <div class="dt_resource"><img :src="getImg('icon/icon_glass.png')"></div>
                     <div>{{$money(movement.resources.glass)}}</div>
                 </div>
                 <div class="dt_item" v-if="movement.resources.sulfur>0">
-                    <div class="dt_resource"><img :src="require('Img/icon/icon_sulfur.png')"></div>
+                    <div class="dt_resource"><img :src="getImg('icon/icon_sulfur.png')"></div>
                     <div>{{$money(movement.resources.sulfur)}}</div>
                 </div>
                 <div class="dt_item" v-if="movement.resources.gold>0">
-                    <div class="dt_resource"><img :src="require('Img/icon/icon_gold.png')"></div>
+                    <div class="dt_resource"><img :src="getImg('icon/icon_gold.png')"></div>
                     <div>{{$money(movement.resources.gold)}}</div>
                 </div>
                 <div v-for="(unit,i) in movement.resources.units" :key="i">
@@ -48,12 +48,17 @@
 <script>
 export default {
     name:'Recursos',
-    props:['movement','close']
+    props:['movement','close'],
+    methods: {
+        getImg(name) {
+            return new URL(`@/resources/game/img/${name}`, import.meta.url).href;
+        }
+    }
 }
 </script>
 
 <style lang="scss" scoped>
-    @import '~Sass/units';
+    @use '~Sass/units' as *;
     .dt_container{
         position: absolute;
         left: 35px;

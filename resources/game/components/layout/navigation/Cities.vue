@@ -54,12 +54,13 @@ export default {
             })
         },
         getSelected(){
-            if(this.data.length>0){
-                var city = this.data.filter(x =>{
-                    return x.selected;
-                })[0]
-                return `[${city.x}:${city.y}] ${city.name}`;
+            if(this.data && this.data.length>0){
+                var city = this.data.find(x => x.selected);
+                if(city && city.x !== undefined && city.y !== undefined && city.name !== undefined){
+                    return `[${city.x}:${city.y}] ${city.name}`;
+                }
             }
+            return '';
         },
         changeCity(city){
             this.show = false;

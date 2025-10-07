@@ -3,21 +3,21 @@
         <div class="gtitle text-center mt-4">Ver informe</div>
         <div class="d-flex">
             <div class="flex-1 d-flex justify-content-center">
-                <div><img class="ship" :src="require('Img/icon/ship_transport.png')"></div>
+                <div><img class="ship" :src="getImg('ship_transport.png')"></div>
                 <div class="my-auto">{{getShips()}}/{{ship_available}}</div>
                 <div v-if="isChangeShip" class="my-auto px-3">
                     <input class="ships" type="number" @change="changeShipAux()" v-model="ship">
                 </div>
             </div>
             <div class="flex-1 d-flex align-items-center justify-content-center">
-                <div class="mr-2"><img :src="require('Img/icon/icon_journeytime.png')"></div>
+                <div class="mr-2"><img :src="getImg('icon_journeytime.png')"></div>
                 <div>
                     <div>Tiempo de carga: {{tiempo_carga()}}</div>
                     <div>Tiempo de viaje: {{distance}}</div>
                 </div>
             </div>
             <div class="flex-1 d-flex align-items-center justify-content-center">
-                <div class="mr-2"><img :src="require('Img/icon/icon_target2.png')"></div>
+                <div class="mr-2"><img :src="getImg('icon_target2.png')"></div>
                 <div>Objetivo: {{objetivo}}</div>
             </div>
         </div>
@@ -68,6 +68,9 @@ export default {
         tiempo_carga(){
             var speed = (this.load_speed_base + (this.load_speed * this.port_level))/60
             return this.$sectotime(Math.ceil(this.size/speed));
+        },
+        getImg(name) {
+            return new URL(`@/resources/game/img/icon/${name}`, import.meta.url).href;
         },
     },
     watch:{

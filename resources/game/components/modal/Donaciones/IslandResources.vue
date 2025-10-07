@@ -4,14 +4,14 @@
         <div class="gtitle text-center">{{$t('island.workers')}}</div>
         <div class="d-flex mt-3">
             <div class="flex-1 citizen">
-                <img class="mb-2" :src="require('Img/island/citizen.png')">
+                <img class="mb-2" :src="getImg('island/citizen.png')">
                 <div class="valores">{{population_available}}</div>
             </div>
             <div class="flex-3">
                 <div class="d-flex texto">
                     <div class="flex-1">
                         <div>{{$t('other.income')}}: </div>
-                        <div>{{$money((population_available*3)-(scientists*scientist_cost))}} <img :src="require('Img/icon/icon_gold.png')"> {{$t('other.perHour')}}</div>
+                        <div>{{$money((population_available*3)-(scientists*scientist_cost))}} <img :src="getImg('icon/icon_gold.png')"> {{$t('other.perHour')}}</div>
                     </div>
                     <div class="flex-1 text-right">
                         <div>{{$t('other.production')}}: </div>
@@ -90,6 +90,9 @@ export default {
         }
     },
     methods:{
+        getImg(name) {
+            return new URL(`@/resources/game/img/${name}`, import.meta.url).href;
+        },
         setMin(){
             this.value = 0
         },
@@ -147,30 +150,26 @@ export default {
             }
         },
         getIcon(){
-            if(this.data.info.type==1){
-                return require('Img/icon/icon_wood.png');
+            if(this.data?.info?.type==1){
+                return new URL('@/resources/game/img/icon/icon_wood.png', import.meta.url).href;
             }else{
-                switch(this.data.info.island_type){
+                switch(this.data?.info?.island_type){
                     case 1:
-                        return require('Img/icon/icon_wine.png');
-                    break;
+                        return new URL('@/resources/game/img/icon/icon_wine.png', import.meta.url).href;
                     case 2:
-                        return require('Img/icon/icon_marble.png');
-                    break;
+                        return new URL('@/resources/game/img/icon/icon_marble.png', import.meta.url).href;
                     case 3:
-                        return require('Img/icon/icon_glass.png');
-                    break;
+                        return new URL('@/resources/game/img/icon/icon_glass.png', import.meta.url).href;
                     case 4:
-                        return require('Img/icon/icon_sulfur.png');
-                    break;
+                        return new URL('@/resources/game/img/icon/icon_sulfur.png', import.meta.url).href;
                 }
             }
         },
         getWorkerIcon(){
-            if(this.data.info.type==1){
-                return require('Img/island/worker.png');
+            if(this.data?.info?.type==1){
+                return new URL('@/resources/game/img/island/worker.png', import.meta.url).href;
             }else{
-                return require('Img/island/worker_mine.png');
+                return new URL('@/resources/game/img/island/worker_mine.png', import.meta.url).href;
             }
         }
     },
@@ -234,7 +233,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    @import "~Sass/modal";
+    @use "~Sass/modal" as *;
     .citizen,.workers{
         position: relative;
         display: flex;

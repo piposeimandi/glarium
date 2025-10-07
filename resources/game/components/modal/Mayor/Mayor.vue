@@ -14,7 +14,7 @@
                 </thead>
                 <tbody>
                     <tr v-for='(item,index) in data.items' :key='index' :class="getActive(item)">
-                        <td><img :src="require('Img/icon/'+getIcon(item.type))"></td>
+                        <td><img :src="getImg(getIcon(item.type))"></td>
                         <td class="go" title="Ir a la ciudad" @click='goTo(item)'><b>{{item.city_name}}</b></td>
                         <td>{{item.fecha}}</td>
                         <td>
@@ -80,11 +80,11 @@
             </table>
             <div class="text-center">
                 <div class="d-inline-block go" title="Ultimos 10" @click='nextPage(false)' v-if='data.page>1'>
-                    <img :src="require('Img/icon/btn_min.png')">
+                        <img :src="getImg('btn_min.png')">
                 </div>
                 <div class="d-inline-block">{{(((data.page-1)*10)+1)}} - {{(((data.page-1)*10)+data.items.length)}}</div>
                 <div class="d-inline-block go" title="Próximos 10" @click='nextPage(true)' v-if='data.more'>
-                    <img :src="require('Img/icon/btn_max.png')">
+                        <img :src="getImg('btn_max.png')">
                 </div>
             </div>
         </div>
@@ -121,6 +121,9 @@ export default {
         }
     },
     methods:{
+            getImg(name) {
+                return new URL(`@/resources/game/img/icon/${name}`, import.meta.url).href;
+            },
         getActive(item){
             return item.readed==0 ? 'active' : '';
         },
@@ -168,8 +171,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "~Sass/modal";
-@import '~Sass/units';
+@use "~Sass/modal" as *;
+@use '~Sass/units' as *;
 
     .cant{
         font-size: 0.7rem

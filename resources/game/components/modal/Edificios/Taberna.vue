@@ -6,7 +6,7 @@
         </div>
         <div class="d-flex mt-3">
             <div class="flex-1 citizen">
-                <img class="mb-2" :src="require('Img/icon/wine-big.png')">
+                <img class="mb-2" :src="getImg('icon/wine-big.png')">
             </div>
             <div class="flex-3">
                 <div class="d-flex texto">
@@ -32,7 +32,7 @@
                 </div>
             </div>
             <div class="flex-1 workers">
-                <img class="mb-2" :src="require('Img/icon/happy.png')">
+                <img class="mb-2" :src="getImg('icon/happy.png')">
             </div>
         </div>
     </div>
@@ -59,6 +59,9 @@ export default {
         }
     },
     methods:{
+        getImg(name) {
+            return new URL(`@/resources/game/img/${name}`, import.meta.url).href;
+        },
         setMin(){
             this.value = 0
         },

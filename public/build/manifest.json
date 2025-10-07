@@ -404,12 +404,12 @@
     "src": "resources/game/img/world/ocean.png"
   },
   "resources/js/app.js": {
-    "file": "assets/app-BoRJbZeT.js",
+    "file": "assets/app-CIj_Dq5_.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
     "css": [
-      "assets/app-BcKZ73Xf.css"
+      "assets/app-UJSiQqVS.css"
     ],
     "assets": [
       "assets/1-PJfB_p0j.png",
@@ -516,7 +516,7 @@
     ]
   },
   "resources/sass/app.scss": {
-    "file": "assets/app-DCQmKd3y.css",
+    "file": "assets/app-COdlDXj5.css",
     "src": "resources/sass/app.scss",
     "isEntry": true
   }

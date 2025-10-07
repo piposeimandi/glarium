@@ -2,7 +2,7 @@
     <div class="px-5">
         <div class="celda" v-for='i in resources' :key='i'>
             <div class="flex-4 celda mr-3">
-                <div class="mr-3"><img :src="require('Img/icon/'+geticon(i))"></div>
+                <div class="mr-3"><img :src="getImg(geticon(i))"></div>
                 <div class="flex-1"><vue-slider @change='cambiar($event,i)' :disabled='getDisable(i)' :ref="'slider_'+(i)" :max='getMax(i)' v-model="values[i]" /></div>
             </div>
             <div class="flex-2 d-flex">
@@ -36,6 +36,9 @@ export default {
         }
     },
     methods:{
+        getImg(name) {
+            return new URL(`@/resources/game/img/icon/${name}`, import.meta.url).href;
+        },
         geticon(i){
             switch(i){
                 case 0:

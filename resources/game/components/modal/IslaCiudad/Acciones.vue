@@ -51,7 +51,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    @import '~Sass/modal';
+    @use '~Sass/modal' as *;
     .box-acciones{
         width: 49%;
         display: inline-block;

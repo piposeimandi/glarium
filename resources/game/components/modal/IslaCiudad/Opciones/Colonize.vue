@@ -5,14 +5,14 @@
             <div class="text-justify">Aquí puedes fundar una colonia. Las colonias son ciudades como tu capital, aunque son controladas por esta última. El nivel de construcción del palacio ubicado en tu capital indica el número de colonias que puedes fundar. Así pues, para poder tener muchas colonias, deberás ir ampliando tu palacio.</div>
             <div class="d-flex mt-4 mb-2">
                 <div class="flex-1 text-center">
-                    <img :src="require('Img/ciudad/1.png')">
+                    <img :src="getImg('ciudad/1.png')">
                 </div>
                 <div class="flex-2 d-flex align-items-center">
                     <div class="requisitos">
                         <div class="gtitle mb-2">Para fundar una colonia hace falta:</div>
-                        <div class="mt-2"><img :src="require('Img/icon/icon_citizen.png')"> {{cost_population}}</div>
-                        <div class="mt-2"><img :src="require('Img/icon/icon_gold.png')"> {{cost_gold}}</div>
-                        <div class="mt-2"><img :src="require('Img/icon/icon_wood.png')"> {{cost_wood}}</div>
+                        <div class="mt-2"><img :src="getImg('icon/icon_citizen.png')"> {{cost_population}}</div>
+                        <div class="mt-2"><img :src="getImg('icon/icon_gold.png')"> {{cost_gold}}</div>
+                        <div class="mt-2"><img :src="getImg('icon/icon_wood.png')"> {{cost_wood}}</div>
                     </div>
                 </div>
             </div>
@@ -46,6 +46,9 @@ export default {
         }
     },
     methods:{
+        getImg(name) {
+            return new URL(`@/resources/game/img/${name}`, import.meta.url).href;
+        },
         getShips(){
             return Math.ceil(this.cost_wood/this.transport)
         },
@@ -94,7 +97,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    @import "~Sass/modal";
+    @use "~Sass/modal" as *;
 
     .box{
         font-size: 0.83rem;

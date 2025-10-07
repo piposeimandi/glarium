@@ -3,15 +3,15 @@
         <div class="gtitle text-center">Area: {{$t('researchCategories['+category+']')}}</div>
         <div class="d-flex my-3 py-1 px-3 fondo">
             <div class="flex-1 d-flex">
-                <div class="mr-2"><img :src="require('Img/icon/icon_scientist.png')"></div>
+                <div class="mr-2"><img :src="getImg('icon_scientist.png')"></div>
                 <div>{{$t('research2.scientist')}}: {{total_scientists}}</div>
             </div>
             <div class="flex-1 d-flex justify-content-center">
-                <div class="mr-2"><img :src="require('Img/icon/icon_pi.png')"></div>
+                <div class="mr-2"><img :src="getImg('icon_pi.png')"></div>
                 <div>{{$t('research2.pi')}} {{$money(research_point)}}</div>
             </div>
             <div class="flex-1 d-flex justify-content-end">
-                <div class="mr-2"><img :src="require('Img/icon/icon_research_time.png')"></div>
+                <div class="mr-2"><img :src="getImg('icon_research_time.png')"></div>
                 <div>{{$t('other.perHour')}}: {{research_point_hour}}</div>
             </div>
         </div>
@@ -27,7 +27,7 @@
                 <div class="text text-justify">{{$t('research['+selected.id+'].text')}}</div>
                 <div class="d-flex mt-3">
                     <div class="costos mr-2">{{$t('other.cost')}}: </div>
-                    <div>{{$money(selected.cost)}} <img :src="require('Img/icon/icon_pi.png')"></div>
+                    <div>{{$money(selected.cost)}} <img :src="getImg('icon_pi.png')"></div>
                 </div>
                 <div class="text-right mt-3">
                     <div v-if='selected.level>maxLevel+1' class="text-danger">{{$t('research2.previusLevel')}}</div>
@@ -60,6 +60,9 @@ export default {
         }
     },
     methods:{
+        getImg(name) {
+            return new URL(`@/resources/game/img/icon/${name}`, import.meta.url).href;
+        },
         changeResearch(research,index){
             this.selected = {
                 id:research.id,

@@ -16,12 +16,12 @@
                             </div>
                         </div>
                         <div>
-                            <div class="d-inline-block" :title="$t('resources.wood')" v-if="build.wood!=0"><img :src="require('Img/icon/icon_wood.png')"> {{build.wood}}</div>
-                            <div class="d-inline-block" :title="$t('resources.wine')" v-if="build.wine!=0"><img :src="require('Img/icon/icon_wine.png')"> {{build.wine}}</div>
-                            <div class="d-inline-block" :title="$t('resources.marble')" v-if="build.marble!=0"><img :src="require('Img/icon/icon_marble.png')"> {{build.marble}}</div>
-                            <div class="d-inline-block" :title="$t('resources.glass')" v-if="build.glass!=0"><img :src="require('Img/icon/icon_glass.png')"> {{build.glass}}</div>
-                            <div class="d-inline-block" :title="$t('resources.sulfur')" v-if="build.sulfur!=0"><img :src="require('Img/icon/icon_sulfur.png')"> {{build.sulfur}}</div>
-                            <div class="d-inline-block" :title="$t('resources.time')" v-if="build.time!=0"><img :src="require('Img/icon/icon_time.png')"> {{$sectotime(build.time)}}</div>
+                            <div class="d-inline-block" :title="$t('resources.wood')" v-if="build.wood!=0"><img :src="getImg('icon_wood.png')"> {{build.wood}}</div>
+                            <div class="d-inline-block" :title="$t('resources.wine')" v-if="build.wine!=0"><img :src="getImg('icon_wine.png')"> {{build.wine}}</div>
+                            <div class="d-inline-block" :title="$t('resources.marble')" v-if="build.marble!=0"><img :src="getImg('icon_marble.png')"> {{build.marble}}</div>
+                            <div class="d-inline-block" :title="$t('resources.glass')" v-if="build.glass!=0"><img :src="getImg('icon_glass.png')"> {{build.glass}}</div>
+                            <div class="d-inline-block" :title="$t('resources.sulfur')" v-if="build.sulfur!=0"><img :src="getImg('icon_sulfur.png')"> {{build.sulfur}}</div>
+                            <div class="d-inline-block" :title="$t('resources.time')" v-if="build.time!=0"><img :src="getImg('icon_time.png')"> {{$sectotime(build.time)}}</div>
                         </div>
                     </div>
                     <div class="flex-1 m-auto">
@@ -53,6 +53,9 @@ export default {
         Ventana1
     },
     methods:{
+        getImg(name) {
+            return new URL(`@/resources/game/img/icon/${name}`, import.meta.url).href;
+        },
         construir(build){
             axios.put('building/'+this.city_id,{
                 position:this.info.position,
@@ -83,9 +86,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    @import "~Sass/modalBuild";
-    @import "~Sass/modal";
-    @import "~Sass/buildings";
+    @use "~Sass/modalBuild" as *;
+    @use "~Sass/modal" as *;
+    @use "~Sass/buildings" as *;
 
     .buildRow{
         border-bottom: 1px solid black;

@@ -126,7 +126,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    @import '~Sass/units';
+    @use '~Sass/units' as *;
     .nounit{
         height: 54px;
         display: flex;

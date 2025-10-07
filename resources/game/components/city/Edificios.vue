@@ -130,7 +130,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "~Sass/buildings";
+@use "~Sass/buildings" as *;
 
 .object {
   position: absolute;

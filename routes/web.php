@@ -32,7 +32,6 @@ Route::post('island/setWorker/{city}', [ApiController::class, 'islandSetWorker']
 Route::post('city/setScientists/{city}', [ApiController::class, 'citySetScientists']);
 
 Route::post('/login', [LoginController::class, 'login'])->name('login.submit');
-Route::post('/test-login', [TestLoginController::class, 'testLogin'])->name('test.login');
 Route::post('/register', [RegisterController::class, 'register'])->name('register.submit');
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 

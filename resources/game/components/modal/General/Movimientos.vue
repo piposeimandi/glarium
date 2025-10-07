@@ -16,13 +16,13 @@
             <tbody>
                 <tr v-for='(movement,index) in movements' :key='index' >
                     <td>
-                        <img :src="require('Img/icon/movement/'+movement.movement_type_id+'.png')"  title="Colonizar">
+                        <img :src="getImg('movement/' + movement.movement_type_id + '.png')"  title="Colonizar">
                     </td>
                     <td v-html='getHorario(movement)'></td>
                     <td>{{movement.trade_ship}} Barcos</td>
                     <td>
                         <div class="position-relative">
-                            <img @click="viewDetail(movement)" class="bton" :src="require('Img/icon/movement/magnifySmall.png')"  title="Ver cargamento">
+                            <img @click="viewDetail(movement)" class="bton" :src="getImg('movement/magnifySmall.png')"  title="Ver cargamento">
                             <Recursos :close="closeDetail" :movement='movement' v-if="movement.detail"></Recursos>
                         </div>
                     </td>
@@ -38,7 +38,7 @@
                     </td>
                     <td>
                         <div class="position-relative">
-                            <div @click="openConfirm(movement)" title="Retirar"><img class="bton" :src="require('Img/icon/movement/btn_abort.png')"></div>
+                            <div @click="openConfirm(movement)" title="Retirar"><img class="bton" :src="getImg('movement/btn_abort.png')"></div>
                             <Confirmar :close='closeConfirm' :confirm='confirmRemove' :data='movement' v-if="movement.confirm"></Confirmar>
                         </div>
                     </td>
@@ -68,6 +68,9 @@ export default {
         Confirmar
     },
     methods:{
+        getImg(name) {
+            return new URL(`@/resources/game/img/icon/${name}`, import.meta.url).href;
+        },
         confirmRemove(movement){
             movement.confirm = false;
             axios.delete('movement/'+movement.id)
@@ -173,7 +176,7 @@ export default {
                 break;
             }
             return `
-                <img title="${tipo_movimiento+' '+texto}" src="${require('Img/icon/movement/arrow_'+image+'_green.png')}">
+                <img title="${tipo_movimiento+' '+texto}" src="${this.getImg('movement/arrow_'+image+'_green.png')}">
             `;
         },
         calculateTime(time){

@@ -83,7 +83,7 @@ export default {
     .cbody{
         flex:1;
         overflow: auto;
-        background: url('~Img/icon/fondo.jpg');
+        background: url('/resources/game/img/icon/fondo.jpg');
     }
     .inputSend{
         flex: 1;

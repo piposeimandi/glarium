@@ -15,12 +15,20 @@ import Edificios from "Components/city/Edificios.vue";
 
 export default {
   name: "City",
-  components:{
+  components: {
     Edificios,
   },
-  mounted(){
-      this.$zoom()
-  }
+  mounted() {
+    if (typeof this.$zoom === "function") {
+      try {
+        this.$zoom();
+      } catch (error) {
+        console.error("Error ejecutando $zoom:", error);
+      }
+    } else {
+      console.warn("El método $zoom no está definido. Verifica su implementación global.");
+    }
+  },
 };
 </script>
 
@@ -32,9 +40,11 @@ export default {
   position: absolute;
   overflow: hidden;
 }
-.city{
-  width:2460px;
-  height:1794px;
-  background: url("~Img/ciudad/city.jpg");
+.city {
+  width: 2460px;
+  height: 1794px;
+  background: url("/resources/game/img/ciudad/city.jpg");
+  background-size: cover;
+  background-position: center;
 }
 </style>

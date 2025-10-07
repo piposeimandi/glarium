@@ -2,31 +2,31 @@
     <div class="flex-1 d-flex resources">
         <div class="flex-1 d-flex">
             <div class="d-flex align-items-center" :title="$t('resources.wood')">
-                <img class="mr-1" :src="require('Img/icon/icon_wood.png')">
+                <img class="mr-1" src="/resources/game/img/icon/icon_wood.png">
                 <span>{{$money(wood)}}</span>
             </div>
         </div>
         <div class="flex-1 d-flex">
             <div class="d-flex align-items-center" :title="$t('resources.wine')">
-                <img class="mr-1" :src="require('Img/icon/icon_wine.png')">
+                <img class="mr-1" src="/resources/game/img/icon/icon_wine.png">
                 <span>{{$money(wine)}}</span>
             </div>
         </div>
         <div class="flex-1 d-flex">
             <div class="d-flex align-items-center" :title="$t('resources.marble')">
-                <img class="mr-1" :src="require('Img/icon/icon_marble.png')">
+                <img class="mr-1" src="/resources/game/img/icon/icon_marble.png">
                 <span>{{$money(marble)}}</span>
             </div>
         </div>
         <div class="flex-1 d-flex">
             <div class="d-flex align-items-center" :title="$t('resources.glass')">
-                <img class="mr-1" :src="require('Img/icon/icon_glass.png')">
+                <img class="mr-1" src="/resources/game/img/icon/icon_glass.png">
                 <span>{{$money(glass)}}</span>
             </div>
         </div>
         <div class="flex-1 d-flex">
             <div class="d-flex align-items-center" :title="$t('resources.sulfur')">
-                <img class="mr-1" :src="require('Img/icon/icon_sulfur.png')">
+                <img class="mr-1" src="/resources/game/img/icon/icon_sulfur.png">
                 <span>{{$money(sulfur)}}</span>
             </div>
         </div>
@@ -51,16 +51,13 @@ export default {
         getResources(){
             axios("city/getResources/" + this.city_id)
             .then(res => {
-                //this.resources = res.data;
                 $resources.commit('updateResources',res.data);
             })
         },
         setProducirRecursos(){
-            //Se encarga de producir recursos cada segundo
             setInterval(this.producirRecursos, 1000);
         },
         producirRecursos(){
-            //Calculamos la produccion de madera
             var woodProducer = (this.worker_forest * (1+((this.producerWoodLevel*2)/100)) * this.bonus_resources) / 3600;
             if(this.wood>=this.maxCapacity){
                 woodProducer = 0;
@@ -77,7 +74,6 @@ export default {
                     ...minerObj,
                     wood:woodProducer*this.corruption
                 }
-                //Calculo del consumo de vino
                 if(this.tavernConsume>0){
                     if(this.island_type!=1){
                         obj = {
@@ -89,7 +85,6 @@ export default {
                     }
                 }
                 if(this.wine < 0){
-                    //Se cabao el vino
                     obj.wine = 0;
                     $resources.commit('updateWine',{wine:0})
                     $resources.commit('setWineTavern',{wine:0})

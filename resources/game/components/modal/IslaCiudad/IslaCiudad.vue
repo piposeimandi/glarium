@@ -77,5 +77,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    @import '~Sass/modal';
+    @use '~Sass/modal' as *;
 </style>

@@ -80,7 +80,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "~Sass/modal";
+@use "~Sass/modal" as *;
     .box{
         font-size: 0.83rem;
         line-height: 0.83rem;

@@ -56,7 +56,7 @@ export default {
 
 <style lang="scss" scoped>
     .forest{
-        background-image: url('~Img/island/forest.png');
+        background-image: url('/resources/game/img/island/forest.png');
         width: 98px;
         height: 74px;
         position: absolute;
@@ -64,7 +64,7 @@ export default {
         right: 475px;
     }
     .forest_active{
-        background-image: url('~Img/island/forest_active.png');
+        background-image: url('/resources/game/img/island/forest_active.png');
         width: 103px;
         height: 74px;
         position: relative;
@@ -81,12 +81,12 @@ export default {
         right: 648px;
     }
     .mine_1{
-        background-image: url('~Img/island/resource_1.png');
+        background-image: url('/resources/game/img/island/resource_1.png');
         width: 88px;
         height: 61px;
     }
     .mine_1_active{
-        background-image: url('~Img/island/resource_1_active.png');
+        background-image: url('/resources/game/img/island/resource_1_active.png');
         display: none;
         width: 88px;
         height: 61px;
@@ -95,12 +95,12 @@ export default {
         display: block;
     }
     .mine_2{
-        background-image: url('~Img/island/resource_2.png');
+        background-image: url('/resources/game/img/island/resource_2.png');
         width: 105px;
         height: 85px;
     }
     .mine_2_active{
-        background-image: url('~Img/island/resource_2_active.png');
+        background-image: url('/resources/game/img/island/resource_2_active.png');
         display: none;
         width: 105px;
         height: 85px;
@@ -109,12 +109,12 @@ export default {
         display: block;
     }
     .mine_3{
-        background-image: url('~Img/island/resource_3.png');
+        background-image: url('/resources/game/img/island/resource_3.png');
         width: 114px;
         height: 85px;
     }
     .mine_3_active{
-        background-image: url('~Img/island/resource_3_active.png');
+        background-image: url('/resources/game/img/island/resource_3_active.png');
         display: none;
         width: 114px;
         height: 85px;
@@ -123,12 +123,12 @@ export default {
         display: block;
     }
     .mine_4{
-        background-image: url('~Img/island/resource_4.png');
+        background-image: url('/resources/game/img/island/resource_4.png');
         width: 112px;
         height: 93px;
     }
     .mine_4_active{
-        background-image: url('~Img/island/resource_4_active.png');
+        background-image: url('/resources/game/img/island/resource_4_active.png');
         display: none;
         width: 120px;
         height: 103px;

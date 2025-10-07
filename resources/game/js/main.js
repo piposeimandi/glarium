@@ -4,6 +4,7 @@ import '@vueform/slider/themes/default.css'
 import Game from 'Js/Game.vue'
 import i18n  from 'Lang/index.js'
 import store from 'Stores/store.js'
+import router from 'Js/router.js';
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "Sass/main.scss"
@@ -13,6 +14,9 @@ import { sectotime, sum, zoom, checkHorarioTipo, money, money_two, floor } from 
 import { chUser, chChat } from 'Js/config'
 
 const app = createApp(Game)
+
+// Registrar Vue Router
+app.use(router);
 
 // Add global properties
 app.config.globalProperties.$sectotime = sectotime
