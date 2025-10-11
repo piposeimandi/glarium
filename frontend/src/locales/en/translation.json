@@ -1,0 +1,348 @@
+{
+    "mayor": "Mayor",
+    "general": "General",
+    "scientist": "Scientist",
+    "diplomat": "Diplomat",
+    "layout": {
+        "highscore": "Highscore",
+        "options": "Options",
+        "board": "Board",
+        "logout": "Logout"
+    },
+    "navigation": {
+        "world": "World",
+        "island": "Island",
+        "city": "City",
+        "actionPoint": "Action Points",
+        "showCities": "Show cities",
+        "population": "Population",
+        "patreon": "Patreon"
+    },
+    "resources": {
+        "wood": "Wood",
+        "wine": "Wine",
+        "marble": "Marble",
+        "glass": "Glass",
+        "sulfur": "Sulfur",
+        "ships": "Ships",
+        "gold": "Gold",
+        "timec": "Time",
+        "population": "Population"
+    },
+    "text": {
+        "message": "Are you sure?",
+        "cancel": "Cancel",
+        "confirm": "Confirm",
+        "shipment": "Shipment"
+    },
+    "buildings": {
+        "1": {
+            "name": "Intendencia",
+            "text": "Manage your city's administration."
+        },
+        "2": {
+            "name": "Academia",
+            "text": "Train scientists to increase productivity."
+        },
+        "3": {
+            "name": "Deposito",
+            "text": "Store your resources safely."
+        },
+        "4": {
+            "name": "Cuartel",
+            "text": "Train your army units here."
+        },
+        "5": {
+            "name": "Taberna",
+            "text": "Serve wine to your citizens to increase happiness."
+        },
+        "6": {
+            "name": "Reductor1",
+            "text": "Reduce building costs."
+        },
+        "7": {
+            "name": "Reductor2",
+            "text": "Reduce building costs."
+        },
+        "8": {
+            "name": "Reductor3",
+            "text": "Reduce building costs."
+        },
+        "9": {
+            "name": "Reductor4",
+            "text": "Reduce building costs."
+        },
+        "10": {
+            "name": "Reductor5",
+            "text": "Reduce building costs."
+        },
+        "11": {
+            "name": "Productor1",
+            "text": "Increase wood production."
+        },
+        "12": {
+            "name": "Productor2",
+            "text": "Increase mine production."
+        },
+        "13": {
+            "name": "Productor3",
+            "text": "Increase mine production."
+        },
+        "14": {
+            "name": "Productor4",
+            "text": "Increase mine production."
+        },
+        "15": {
+            "name": "Productor5",
+            "text": "Increase mine production."
+        },
+        "16": {
+            "name": "Puerto",
+            "text": "Manage ships and trade at your port."
+        }
+    },
+    "modal": {
+        "general": {
+            "militia": "Militia",
+            "receivedMessages": "Received Messages",
+            "sentReports": "Sent Reports",
+            "movements": "Movements ({{count}})",
+            "warReports": "War Reports ({{count}})",
+            "tabReceivedTitle": "Received Messages",
+            "tabSentTitle": "Sent Messages",
+            "noMovements": "No movements",
+            "altMovements": "Movements icon",
+            "altReports": "Reports icon",
+            "mission": "Mission",
+            "schedule": "Schedule",
+            "origin": "Origin",
+            "destination": "Destination",
+            "action": "Action",
+            "viewCargo": "View Cargo",
+            "withdraw": "Withdraw",
+            "movementType": {
+                "transport": "Transport",
+                "attack": "Attack",
+                "defense": "Defense",
+                "colonize": "Colonize"
+            }
+        },
+        "research": {
+            "researchCategories": {
+                "1": "Seafaring",
+                "2": "Economy",
+                "3": "Knowledge",
+                "4": "Military"
+            },
+            "scientistAlt": "Scientist icon",
+            "piAlt": "PI icon",
+            "researchTimeAlt": "Research time icon",
+            "scientists": "Scientists",
+            "pi": "PI",
+            "perHour": "Per hour",
+            "cost": "Cost",
+            "previousLevelRequired": "Previous level required",
+            "finished": "Finished",
+            "researchButton": "Research",
+            "notEnoughPoints": "Not enough points",
+            "research": {
+                "0": {
+                    "name": "Research 0",
+                    "text": "Description for Research 0"
+                },
+                "1": {
+                    "name": "Research 1",
+                    "text": "Description for Research 1"
+                },
+                "2": {
+                    "name": "Research 2",
+                    "text": "Description for Research 2"
+                }
+            },
+            "windowLeftTitle": "Scientific Advisor",
+            "windowRightTitle": "Research Area"
+        },
+        "donations": {
+            "level": "Level",
+            "required_next_level": "Required for next level:",
+            "existing": "Existing:",
+            "donate": "Donate",
+            "enter_amount": "Enter amount",
+            "max": "Max",
+            "confirm": "Confirm",
+            "under_construction": "Under construction",
+            "forestTitle": "Forest",
+            "vinesTitle": "Vines",
+            "quarryTitle": "Quarry",
+            "crystalTitle": "Crystal",
+            "sulfurTitle": "Sulfur",
+            "workers": "Workers",
+            "islandCities": "Island Cities",
+            "income": "Income",
+            "production": "Production",
+            "perHour": "per hour"
+        },
+        "mayor": {
+            "title": "Mayor",
+            "current_events": "Current events ({{total}})",
+            "place": "Place",
+            "date": "Date",
+            "subject": "Subject",
+            "go_to_city": "Go to city",
+            "merchant_arrived": "Your merchant fleet from {{from}} has arrived at {{to}} and delivered the following goods:",
+            "enemy_arrived": "An enemy fleet from {{from}} has arrived at your city {{to}} and delivered the following goods:",
+            "city_founded": "Your city {{city}} has been founded.",
+            "units_completed": "Units have been completed in the barracks:",
+            "prev_10": "Previous 10",
+            "next_10": "Next 10"
+        },
+        "message": {
+            "actions": "Actions",
+            "receiver": "Receiver",
+            "subject": "Subject",
+            "message": "Message",
+            "city": "City",
+            "date": "Date",
+            "go_to_city": "Go to city",
+            "all": "All",
+            "none": "None",
+            "unread": "Unread",
+            "read": "Read",
+            "prev_10": "Previous 10 messages",
+            "next_10": "Next 10 messages",
+            "mark_read": "Mark as read",
+            "remove": "Remove",
+            "inbox": "Inbox",
+            "outbox": "Outbox",
+            "inbox_title": "Unread/Total received messages",
+            "outbox_title": "Sent messages",
+            "noMessage": "No messages available"
+        },
+        "islandCity": {
+            "viewReport": "View Report",
+            "ship": "Ship",
+            "journeyTime": "Journey Time",
+            "loadTime": "Load Time",
+            "travelTime": "Travel Time",
+            "target": "Target",
+            "attackInfo": "Other cities may have treasures better stored in our depot. Units outside your city pay double upkeep. Think carefully before sending your troops to plunder.",
+            "sendArmy": "Send Army",
+            "attackWarning": "Command your Polis troops to plunder the city Wine 2. Keep the target city port free of enemy ships, or your troops may be captured by merchant ships!",
+            "plunder": "Plunder!",
+            "text": "Send a message to another city.",
+            "receiver": "Receiver",
+            "subject": "Subject",
+            "message": "Message",
+            "errorMessage": "Message cannot be empty.",
+            "characters": "characters remaining",
+            "send": "Send",
+            "transport": "Select which goods and how many you want to transport from {{city_from.name}} to {{data.city.name}}. Keep in mind the number of trade ships you’ll need for this operation!",
+            "name": "City",
+            "player": "Player",
+            "alliance": "Alliance",
+            "points": "Points",
+            "writeMessage": "Write Message",
+            "transportResources": "Transport Resources",
+            "attack": "Attack",
+            "info": "Info"
+        },
+        "building": {
+            "list_title": "Construction list",
+            "building": "Under construction",
+            "title": "Units scheduled for training",
+            "no_units": "No units have been selected",
+            "button": "Train",
+            "trainFormation": "Train units",
+            "max": "max",
+            "required_level": "Required barracks level {{level}}",
+            "notice_title": "Notice",
+            "no_issue": "Nothing to report! Congratulations, everything in the city is in order!",
+            "corruption_title": "Corruption is rampant in this city.",
+            "corruption_text": "Productivity and satisfaction in this city are clearly declining! Expand your Governor's Residence or Palace to reduce corruption.",
+            "living_space": "Living space: {{current}}/{{max}}",
+            "action_points": "Action points: {{current}}/{{max}}",
+            "growth": "Growth: {{amount}} per hour",
+            "total_gold": "Total gold: {{amount}}",
+            "corruption": "Corruption: {{amount}}%",
+            "happy": "Happy",
+            "change_city_name": "Change city name",
+            "previous_name": "Previous city name:",
+            "new_name": "New city name:",
+            "accept_name": "Accept name",
+            "satisfaction_title": "Satisfaction Level",
+            "satisfaction_description": "Satisfaction in your city is influenced by various factors. This chart can help identify problems and opportunities.",
+            "bonuses": "Bonuses",
+            "basic_bonus": "Basic bonus",
+            "wine": "Wine",
+            "no_tavern": "There is no Tavern in this city yet!",
+            "maintenance": "Maintenance",
+            "population": "Population",
+            "satisfaction_level": "Satisfaction Level:",
+            "capital": "Capital",
+            "colony": "Colony",
+            "workers": "Workers",
+            "confirm": "Confirm",
+            "income": "Income",
+            "production": "Production",
+            "perHour": "per hour",
+            "upgrade": "Upgrade",
+            "demolition": "Demolition",
+            "level": "Level",
+            "upgradeText": "Upgrade building to level {{level}}",
+            "warehouse": {
+                "title": "Warehouse",
+                "safe": "Protected",
+                "notSafe": "Unprotected",
+                "total": "Total",
+                "capacity": "Capacity"
+            },
+            "buildingProducer": {
+                "title": "{{building}} Production",
+                "productionBase": "Base Production",
+                "total": "Total"
+            },
+            "port": {
+                "speedTitle": "Port Loading Speed",
+                "speedText": "This is the speed at which your port can load goods.",
+                "speedMin": "per min",
+                "tradeShipBuyTitle": "Buy Trade Ship",
+                "tradeShipBuyText": "You can purchase trade ships to expand your trading capabilities.",
+                "tradeShipBuyBtn": "Buy Trade Ship",
+                "tradeShipBuyMissing1": "Not enough gold to buy a trade ship.",
+                "tradeShipBuyMissing2": "You need {{goldMissing}} more gold."
+            },
+            "buildingReducer": {
+                "building": "Building: {{building_id}}",
+                "unit": "Unit: {{building_id}}",
+                "costBase": "Base Cost",
+                "research": "Research"
+            },
+            "tavern": {
+                "title": "Serve Wine",
+                "description": "You can determine how much wine will be served to your population. The more wine you offer, the happier your citizens will be. Warning: Each time you distribute more wine, the tavern keeper will need an extra ration!",
+                "citizensSatisfied": "Satisfied Citizens",
+                "noWine": "No wine",
+                "winePerHour": "wine per hour"
+            }
+        }
+    },
+    "login": {
+        "title": "Login",
+        "emailPlaceholder": "Email",
+        "passwordPlaceholder": "Password",
+        "submit": "Submit",
+        "noAccount": "Don't have an account?",
+        "createAccount": "Create one"
+    },
+    "register": {
+        "title": "Register",
+        "namePlaceholder": "Name",
+        "emailPlaceholder": "Email",
+        "passwordPlaceholder": "Password",
+        "passwordConfirmPlaceholder": "Password Confirmation",
+        "submit": "Submit",
+        "errorPlaceholder": "Error message placeholder",
+        "alreadyAccount": "Already have an account?",
+        "login": "Login"
+    }
+}
