@@ -4,9 +4,9 @@ import { useTranslation } from 'react-i18next';
 import iconGlass from '../assets/img/icon/icon_glass.png';
 import iconGold from '../assets/img/icon/icon_upkeep.png';
 import iconMarble from '../assets/img/icon/icon_marble.png';
-import iconPopulation from '../assets/img/icon/icon_population.png';
+import iconPopulation from '../assets/img/icon/icon_citizen.png';
 import iconSulfur from '../assets/img/icon/icon_sulfur.png';
-import iconTimec from '../assets/img/icon/icon_timec.png';
+import iconTimec from '../assets/img/icon/icon_time.png';
 import iconWine from '../assets/img/icon/icon_wine.png';
 import iconWood from '../assets/img/icon/icon_wood.png';
 
@@ -52,7 +52,7 @@ const ResourceItem: React.FC<ResourceItemProps> = ({
     <div className="inline-block" title={t(`resources.${type}`)}>
       <img
         src={icons[type]}
-        className={`${disabled && amount === 0 ? 'opacity-50' : ''}`}
+        className={`m-auto ${disabled && amount === 0 ? 'opacity-50' : ''}`}
         alt={t(`resources.${type}`)}
       />
       <span className="ml-1">{amount}</span>

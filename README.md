@@ -1,16 +1,14 @@
-![](https://i.ibb.co/NVpwNQZ/1.png)
+![](https://iili.io/Ki3Z7h7.png)
 
 # Glarium
 
 Glarium is a project that originally started as a clone of the MMORTS **Ikariam**. I worked on it for a couple of months, building the database, backend, and starting the frontend.
 
-⚠️ **Currently, I am working on a migration to a new technology stack to make the project modern, easier to maintain, and simple for other developers to run.**
-
 ---
 
 ### Technology Stack
 
-**Backend:** Node.js, Express, TypeScript  
+**Backend:** Node.js, Express + TypeScript  
 **Frontend:** React 19 + TypeScript  
 **Database:** MySQL  
 **Deployment:** Everything runs in Docker  
@@ -60,6 +58,9 @@ I would like other developers to be able to contribute to the project and help i
 
 ### Screenshots
 
-![](https://i.ibb.co/c20gwHg/2.png)  
+![](https://iili.io/K6Otr41.png)  
 
-![](https://i.ibb.co/HdVHY7s/3.png)
+![](https://iili.io/Ki3sUpS.png)
+
+### Trello
+[Access Trello](https://trello.com/invite/b/5de31570145e1a01eec32777/ATTI6b3aa287545923c4883bf11dace025ed79D7BDBE/glarium)

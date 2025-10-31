@@ -1,0 +1,1196 @@
+{
+	"info": {
+		"_postman_id": "f9889fac-d414-425f-ac4c-00808065a135",
+		"name": "glarium",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6535200",
+		"_collection_link": "https://dark-star-739161.postman.co/workspace/Team-Workspace~facded56-104b-4fe1-80e2-b854d0d64cfe/collection/6535200-f9889fac-d414-425f-ac4c-00808065a135?action=share&source=collection_link&creator=6535200"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Luis Zurita\",\n  \"email\": \"test@example.com\",\n  \"password\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_ROUTE}}api/auth/register",
+							"host": [
+								"{{API_ROUTE}}api"
+							],
+							"path": [
+								"auth",
+								"register"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "asd",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"zuritabal@gmail.com\",\n  \"password\": \"1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_ROUTE}}api/auth/login",
+							"host": [
+								"{{API_ROUTE}}api"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "City",
+			"item": [
+				{
+					"name": "GetInfo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{BEARER_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"cityId\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_ROUTE}}api/city/getInfo",
+							"host": [
+								"{{API_ROUTE}}api"
+							],
+							"path": [
+								"city",
+								"getInfo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SetWine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{BEARER_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"cityId\": 1, \"wine\": 12 }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_ROUTE}}api/city/setWine",
+							"host": [
+								"{{API_ROUTE}}api"
+							],
+							"path": [
+								"city",
+								"setWine"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SetScientists",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{BEARER_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"cityId\": 1, \"scientists\": 0 }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_ROUTE}}api/city/setScientists",
+							"host": [
+								"{{API_ROUTE}}api"
+							],
+							"path": [
+								"city",
+								"setScientists"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "BuyTradeShip",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{BEARER_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{API_ROUTE}}api/user/buyTradeShip",
+							"host": [
+								"{{API_ROUTE}}api"
+							],
+							"path": [
+								"user",
+								"buyTradeShip"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetMayor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{BEARER_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"page\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_ROUTE}}api/user/getMayor",
+							"host": [
+								"{{API_ROUTE}}api"
+							],
+							"path": [
+								"user",
+								"getMayor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetMessages",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{BEARER_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"page\": 0,\n    \"type\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_ROUTE}}api/user/getMessages",
+							"host": [
+								"{{API_ROUTE}}api"
+							],
+							"path": [
+								"user",
+								"getMessages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SendMessage",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{BEARER_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"cityFromId\": 1,\n    \"message\": \"Prueba\",\n    \"cityId\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_ROUTE}}api/user/sendMessage",
+							"host": [
+								"{{API_ROUTE}}api"
+							],
+							"path": [
+								"user",
+								"sendMessage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ReadMessage",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{BEARER_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"messageId\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_ROUTE}}api/user/readMessage",
+							"host": [
+								"{{API_ROUTE}}api"
+							],
+							"path": [
+								"user",
+								"readMessage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UnreadOrReadAll",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{BEARER_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"readed\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_ROUTE}}api/user/unreadOrReadAll",
+							"host": [
+								"{{API_ROUTE}}api"
+							],
+							"path": [
+								"user",
+								"unreadOrReadAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteMessages",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{BEARER_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"messages\": [1],\n    \"type\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_ROUTE}}api/user/deleteMessages",
+							"host": [
+								"{{API_ROUTE}}api"
+							],
+							"path": [
+								"user",
+								"deleteMessages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Config",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{BEARER_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_ROUTE}}api/user/config",
+							"host": [
+								"{{API_ROUTE}}api"
+							],
+							"path": [
+								"user",
+								"config"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Building",
+			"item": [
+				{
+					"name": "GetInfo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{BEARER_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"cityId\": 5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_ROUTE}}api/building/getInfo",
+							"host": [
+								"{{API_ROUTE}}api"
+							],
+							"path": [
+								"building",
+								"getInfo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Available",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{BEARER_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"position\": 1,\n  \"cityId\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_ROUTE}}api/building/available",
+							"host": [
+								"{{API_ROUTE}}api"
+							],
+							"path": [
+								"building",
+								"available"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateBuilding",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{BEARER_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"position\": 6,\n  \"cityId\": 1,\n  \"buildingId\": 4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_ROUTE}}api/building/create",
+							"host": [
+								"{{API_ROUTE}}api"
+							],
+							"path": [
+								"building",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "NextLevel",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{BEARER_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"buildingId\": 16,\n  \"level\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_ROUTE}}api/building/nextLevel",
+							"host": [
+								"{{API_ROUTE}}api"
+							],
+							"path": [
+								"building",
+								"nextLevel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpgradeBuilding",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{BEARER_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"cityBuildingId\": 152\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_ROUTE}}api/building/upgrade",
+							"host": [
+								"{{API_ROUTE}}api"
+							],
+							"path": [
+								"building",
+								"upgrade"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Island",
+			"item": [
+				{
+					"name": "GetInfo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{BEARER_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"islandId\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_ROUTE}}api/island/getInfo",
+							"host": [
+								"{{API_ROUTE}}api"
+							],
+							"path": [
+								"island",
+								"getInfo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetData",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{BEARER_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"islandId\": 1,\n  \"type\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_ROUTE}}api/island/getData",
+							"host": [
+								"{{API_ROUTE}}api"
+							],
+							"path": [
+								"island",
+								"getData"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SetWorker",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{BEARER_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"workers\": 1,\n  \"type\": true,\n  \"cityId\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_ROUTE}}api/island/setWorker",
+							"host": [
+								"{{API_ROUTE}}api"
+							],
+							"path": [
+								"island",
+								"setWorker"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SetDonation",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{BEARER_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"islandId\": 1,\n  \"type\": true,\n  \"cityId\": 1,\n  \"wood\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_ROUTE}}api/island/setDonation",
+							"host": [
+								"{{API_ROUTE}}api"
+							],
+							"path": [
+								"island",
+								"setDonation"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "World",
+			"item": [
+				{
+					"name": "GetIslands",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{BEARER_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"x\": 0,\n  \"y\": 41\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_ROUTE}}api/world/getIslands",
+							"host": [
+								"{{API_ROUTE}}api"
+							],
+							"path": [
+								"world",
+								"getIslands"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Research",
+			"item": [
+				{
+					"name": "GetResearchData",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{BEARER_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{API_ROUTE}}api/research/getResearchData",
+							"host": [
+								"{{API_ROUTE}}api"
+							],
+							"path": [
+								"research",
+								"getResearchData"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateResearch",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{BEARER_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"researchId\": 1}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_ROUTE}}api/research/create",
+							"host": [
+								"{{API_ROUTE}}api"
+							],
+							"path": [
+								"research",
+								"create"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Unit",
+			"item": [
+				{
+					"name": "CreateUnit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{BEARER_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"cityId\": 1,\n  \"units\": [1],\n  \"cants\": [1]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_ROUTE}}api/unit/create",
+							"host": [
+								"{{API_ROUTE}}api"
+							],
+							"path": [
+								"unit",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UnitCity",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{BEARER_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"cityId\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_ROUTE}}api/unit/city",
+							"host": [
+								"{{API_ROUTE}}api"
+							],
+							"path": [
+								"unit",
+								"city"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Movement",
+			"item": [
+				{
+					"name": "Colonize",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{BEARER_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"islandId\": 1,\n  \"cityId\": 1,\n  \"position\": 9\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_ROUTE}}api/movement/colonize",
+							"host": [
+								"{{API_ROUTE}}api"
+							],
+							"path": [
+								"movement",
+								"colonize"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Transport",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{BEARER_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"cityId\": 1,\n  \"cityToId\": 5,\n  \"wood\": 100,\n  \"wine\": 0,\n  \"marble\": 0,\n  \"glass\": 0,\n  \"sulfur\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_ROUTE}}api/movement/transport",
+							"host": [
+								"{{API_ROUTE}}api"
+							],
+							"path": [
+								"movement",
+								"transport"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RemoveMovement",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{BEARER_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"movementId\": 7\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_ROUTE}}api/movement/removeMovement",
+							"host": [
+								"{{API_ROUTE}}api"
+							],
+							"path": [
+								"movement",
+								"removeMovement"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetMovements",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{BEARER_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_ROUTE}}api/movement/getMovements",
+							"host": [
+								"{{API_ROUTE}}api"
+							],
+							"path": [
+								"movement",
+								"getMovements"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Combat",
+			"item": [
+				{
+					"name": "CombatMovement",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{BEARER_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"cityFromId\": 1,\n  \"cityId\": 2,\n  \"units\": [1],\n  \"cants\": [10],\n  \"tradeShip\": 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_ROUTE}}api/combat/combatMovement",
+							"host": [
+								"{{API_ROUTE}}api"
+							],
+							"path": [
+								"combat",
+								"combatMovement"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -9,8 +9,7 @@ import { CityBL } from "./cityBL";
 
 interface GenerateToken {
     userId: number,
-    email: string,
-    cityId: number
+    email: string
 }
 
 export class UserBL {
@@ -20,11 +19,17 @@ export class UserBL {
         if(!user)
             throw new Error("User doesn't exists");
 
-        const city = await prisma.userCity.findFirst({ where: { userId: user.id, capital: true } })
-        if(!city)
+        const userCity = await prisma.userCity.findFirst({ where: { userId: user.id, capital: true }, include: { city: { include: { islandCity: { include: { island: true } } } } } })
+        if(!userCity)
             throw new Error("City doesn't exists");
+
+        const island = userCity.city.islandCity?.island;
+        if(!island)
+            throw new Error("Island doesn't exists");
         
-        return { userId: user.id, cityId: city.id };
+        const { x, y, id } = island;
+        
+        return { userId: user.id, cityId: userCity.cityId, islandId: id, x, y, name: user.name };
     }
 
     static async register({ name, email, password }: RequestUserRegister) {
@@ -76,15 +81,21 @@ export class UserBL {
         }
 
         const cityId = await CityBL.createCity(userId, islandId, position, true, dayjs().toDate());
+        const island = await prisma.island.findFirstOrThrow({ where: { id: islandId } });
+
+        const { x, y } = island;
 
         return {
             userId,
-            cityId
+            cityId,
+            islandId,
+            x,
+            y
         }
     }
 
-    static generateToken({ userId, email, cityId }: GenerateToken) {
-        return jwt.sign({ id: userId, email: email, cityId }, JWT_SECRET, {
+    static generateToken({ userId, email }: GenerateToken) {
+        return jwt.sign({ userId: userId, email: email }, JWT_SECRET, {
             expiresIn: JWT_EXPIRES_IN
         });
     }

@@ -6,7 +6,7 @@
     "layout": {
         "highscore": "Highscore",
         "options": "Options",
-        "board": "Board",
+        "github": "Github",
         "logout": "Logout"
     },
     "navigation": {
@@ -37,68 +37,80 @@
     },
     "buildings": {
         "1": {
-            "name": "Intendencia",
-            "text": "Manage your city's administration."
+            "name": "Town Hall",
+            "text": "At the heart of the town you can find the town hall through which the town grows and flourishes. The smart civil servants, who work here, love to give you information about your local population Every expansion of the town hall increases the maximum number of citizens in this town."
         },
         "2": {
-            "name": "Academia",
-            "text": "Train scientists to increase productivity."
+            "name": "Academy",
+            "text": "The academy is a sublime place full of knowledge which combines old traditions with modern technology. The wisest heads of your town await entrance! Consider that every scientist needs his own laboratory which costs money. The larger the academy the more scientists you can employ at the same time."
         },
         "3": {
-            "name": "Deposito",
-            "text": "Store your resources safely."
+            "name": "Warehouse",
+            "text": "Some of your supplies are protected from pillagers at the warehouse. It keeps rain, birds and other pests away. The warehouse keeper is also always well informed about your supplies. Expanding your warehouse allows you to protect and store more resources."
         },
         "4": {
-            "name": "Cuartel",
-            "text": "Train your army units here."
+            "name": "Barracks",
+            "text": "At the Barracks the boisterous youth are honed into keen fighters. Your soldiers know how to handle swords, spears and slings and are also able to lead the mightiest war machines safely over the field. Troops are trained more quickly when you expand your Barracks. There is a minimum training time of 1 second per unit and 10 seconds per training order."
         },
         "5": {
-            "name": "Taberna",
-            "text": "Serve wine to your citizens to increase happiness."
+            "name": "Tavern",
+            "text": "After a hard day`s work there is nothing more pleasant than a cool jug of wine. That`s why your citizens love to meet at the tavern. And when the last old songs have been sung at the end of the day, they set out merrily and cheerful to their homes. Every expansion of your tavern allows you to serve more wine."
         },
         "6": {
-            "name": "Reductor1",
-            "text": "Reduce building costs."
+            "name": "Carpenter`s Workshop",
+            "text": "Only the best lumber is used at the Carpenter’s Workshop. Our handy craftsmen use this to put together solid timber frameworks so our houses do not have to be repaired all the time. Every level of the Carpenter’s Workshop lowers your demand for building material by 1% of the base value, up to a maximum of 50%."
         },
         "7": {
-            "name": "Reductor2",
-            "text": "Reduce building costs."
+            "name": "Optician",
+            "text": "Lenses and magnifying glasses don’t just help our scientists to see clearly and to find important papers on their desk, but they are also necessary for inventing all those new technologies that make us so proud. The Optician keeps everything we need carefully stored in boxes, so that fewer things get lost. For every level of the building, the demand for crystal in your town is reduced by 1% of the base value, up to a maximum of 50%."
         },
         "8": {
-            "name": "Reductor3",
-            "text": "Reduce building costs."
+            "name": "Firework Test Area",
+            "text": "Constant firework tests don’t just light up the skies but sometimes also the surrounding buildings. However our scientists can only optimise the demand for sulphur if they keep testing new mixtures. For every level of the building, the demand for sulphur in your town is reduced by 1% of the base value, up to a maximum of 50%."
         },
         "9": {
-            "name": "Reductor4",
-            "text": "Reduce building costs."
+            "name": "Wine Press",
+            "text": "Only the purest wines mature in the town’s deep and cool cellars. The cellarer ensures that not a drop goes to waste and that all the wine can run down the throats of your citizens. For every level of the building, the demand for wine in your town is reduced by 1% of the base value, up to a maximum of 50%."
         },
         "10": {
-            "name": "Reductor5",
-            "text": "Reduce building costs."
+            "name": "Stonemason",
+            "text": "A trained Stonemason always quarries the right blocks of marble with his strong arms. Thus less is broken and our builders always have the material they need. For every level of expansion, this building increases your marble production by 2% of the base value, up to a maximum of 140%."
         },
         "11": {
-            "name": "Productor1",
-            "text": "Increase wood production."
+            "name": "Forester`s House",
+            "text": "Strong lumberjacks can chop down even the largest trees. But they also know that a forest must be cultivated and new trees planted so that we can continue to use only the best timber for our houses. Every level of the Forester’s House increases your production of building material by 2% of the base value, up to a maximum of 140%."
         },
         "12": {
-            "name": "Productor2",
-            "text": "Increase mine production."
+            "name": "Glassblower",
+            "text": "True masters of their art create sparkling pieces at the Glassblower’s house. The blow tubes, glasses and all sorts of other apparatus are only understood by our scientists. And they are so nimble, that barely anything ever gets broken. Every level of the Glassblower increases your production of crystal by 2% of the base value, up to a maximum of 140%."
         },
         "13": {
-            "name": "Productor3",
-            "text": "Increase mine production."
+            "name": "Alchemist`s Tower",
+            "text": "When the wind blows from the west, a smell fills the streets around the tower and not many citizens are seen leaving the house without a peg on their nose. Our alchemists work restlessly on finding the perfect mixture and ensuring that we can get the maximum amount of sulphur from the pit. For every level of the building, your sulphur production is increased by 2% of the base value, up to a maximum of 140%."
         },
         "14": {
-            "name": "Productor4",
-            "text": "Increase mine production."
+            "name": "Winery",
+            "text": "A winegrower only chooses the most sunny hills of the surrounding area to cover them with the comforting green of the vines. That’s how the vineyards produce plump fruits that make for a much better harvest. Every level of the Winery increases your wine production by 2% of the base value, up to a maximum of 140%."
         },
         "15": {
-            "name": "Productor5",
-            "text": "Increase mine production."
+            "name": "Stonemason",
+            "text": "A trained Stonemason always quarries the right blocks of marble with his strong arms. Thus less is broken and our builders always have the material they need. For every level of expansion, this building increases your marble production by 2% of the base value, up to a maximum of 140%."
         },
         "16": {
-            "name": "Puerto",
-            "text": "Manage ships and trade at your port."
+            "name": "Trading Port",
+            "text": "The port is your gate to the world. Here you can recruit transport ships and ready them for long journeys. If you have a Dockyard, you can also purchase Freighters here at the port. You can pick up precious goods from all over the world here. In larger ports, your ships will load faster. You can build another port, which increases your loading speed, as soon as you have completed the research dry-dock."
+        },
+        "17": {
+            "name": "Palace",
+            "text": "The Palace is an excellent place to lead your empire into the future! It also provides a gorgeous view of the sea. Every expansion of your capital’s Palace allows you to found an additional colony. Palace levels 21 and above do not permit any more cities to be built. The current maximum of 21 towns (1 capital + 20 colonies) remains, but these higher levels do allow enemy towns to be occupied even if you have reached the limit of your own towns."
+        },
+        "18": {
+            "name": "Governor`s Residence",
+            "text": "A governor in your colony guarantees that all the daily administrative tasks are done properly. He also lowers the level of corruption in your colony. The governor`s residence can be upgraded to a palace if you ever want to move your capital."
+        },
+        "19": {
+            "name": "Town Wall",
+            "text": "The town wall protects your citizens against your enemies and the sun. Beware! Enemies will try to tear holes into your wall or to climb over it. Every level increases the resistance of your town wall."
         }
     },
     "modal": {
@@ -128,12 +140,6 @@
             }
         },
         "research": {
-            "researchCategories": {
-                "1": "Seafaring",
-                "2": "Economy",
-                "3": "Knowledge",
-                "4": "Military"
-            },
             "scientistAlt": "Scientist icon",
             "piAlt": "PI icon",
             "researchTimeAlt": "Research time icon",
@@ -145,20 +151,6 @@
             "finished": "Finished",
             "researchButton": "Research",
             "notEnoughPoints": "Not enough points",
-            "research": {
-                "0": {
-                    "name": "Research 0",
-                    "text": "Description for Research 0"
-                },
-                "1": {
-                    "name": "Research 1",
-                    "text": "Description for Research 1"
-                },
-                "2": {
-                    "name": "Research 2",
-                    "text": "Description for Research 2"
-                }
-            },
             "windowLeftTitle": "Scientific Advisor",
             "windowRightTitle": "Research Area"
         },
@@ -227,7 +219,7 @@
             "target": "Target",
             "attackInfo": "Other cities may have treasures better stored in our depot. Units outside your city pay double upkeep. Think carefully before sending your troops to plunder.",
             "sendArmy": "Send Army",
-            "attackWarning": "Command your Polis troops to plunder the city Wine 2. Keep the target city port free of enemy ships, or your troops may be captured by merchant ships!",
+            "attackWarning": "Command your Polis troops to plunder the city. Keep the target city port free of enemy ships, or your troops may be captured by merchant ships!",
             "plunder": "Plunder!",
             "text": "Send a message to another city.",
             "receiver": "Receiver",
@@ -236,18 +228,29 @@
             "errorMessage": "Message cannot be empty.",
             "characters": "characters remaining",
             "send": "Send",
-            "transport": "Select which goods and how many you want to transport from {{city_from.name}} to {{data.city.name}}. Keep in mind the number of trade ships you’ll need for this operation!",
+            "transportMsg": "Select which goods and how many you want to transport from {{city_from.name}} to {{data.city.name}}. Keep in mind the number of trade ships you’ll need for this operation!",
             "name": "City",
             "player": "Player",
             "alliance": "Alliance",
             "points": "Points",
             "writeMessage": "Write Message",
             "transportResources": "Transport Resources",
-            "attack": "Attack",
-            "info": "Info"
+            "attack": "Pillage",
+            "info": "Info",
+            "diplomacy": "Diplomacy",
+            "defend": "Defend town!",
+            "transport": "Transport goods",
+            "actions": "Actions",
+            "colonizeTitle": "Colonize",
+            "colonizeInfo": "This place seems perfect for a new town! A shallow section of the coast provides access to the ocean and the fertile green hills in the area can feed a lot of people.",
+            "colonizeRequirements": "The founding of a colony requires:"
         },
         "building": {
             "list_title": "Construction list",
+            "text": "A vast and empty place catches your eye. Which building should your citizens construct here?",
+            "research": "Required research:",
+            "buildNow": "Build now!",
+            "noResources": "You don’t have enough resources",
             "building": "Under construction",
             "title": "Units scheduled for training",
             "no_units": "No units have been selected",
@@ -309,11 +312,11 @@
                 "tradeShipBuyText": "You can purchase trade ships to expand your trading capabilities.",
                 "tradeShipBuyBtn": "Buy Trade Ship",
                 "tradeShipBuyMissing1": "Not enough gold to buy a trade ship.",
-                "tradeShipBuyMissing2": "You need {{goldMissing}} more gold."
+                "tradeShipBuyMissing2": "You need {{goldMissing}} more gold.",
+                "cost": "Cost"
             },
             "buildingReducer": {
-                "building": "Building: {{building_id}}",
-                "unit": "Unit: {{building_id}}",
+                "building": "Building",
                 "costBase": "Base Cost",
                 "research": "Research"
             },
@@ -323,6 +326,10 @@
                 "citizensSatisfied": "Satisfied Citizens",
                 "noWine": "No wine",
                 "winePerHour": "wine per hour"
+            },
+            "barracks": {
+                "requiredLevel": "Requires building level {{level}}",
+                "max": "max"
             }
         }
     },
@@ -344,5 +351,161 @@
         "errorPlaceholder": "Error message placeholder",
         "alreadyAccount": "Already have an account?",
         "login": "Login"
+    },
+    "validation": {
+        "required": "This field is required",
+        "max": "Maximum {{max}} characters",
+        "invalidEmail": "Invalid email address",
+        "passwordsNotMatch": "Passwords do not match"
+    },
+    "researchCategories": {
+        "1": "Seafaring",
+        "2": "Economy",
+        "3": "Knowledge",
+        "4": "Military"
+    },
+    "research": {
+        "1": {
+            "name": "Carpentry",
+            "text": "The forests of our islands offer excellent wood for building sturdy beams for the roofs of our most beautiful buildings. However, it is necessary to choose the pieces carefully and treat them. A city carpenter would ensure much less wood is wasted."
+        },
+        "2": {
+            "name": "Preservation",
+            "text": "We have learned how to store our raw materials well-protected for a long time. Additionally, part of our reserves is insured against theft by pirates and other villains!"
+        },
+        "3": {
+            "name": "Pulley",
+            "text": "A brilliant idea: A rope wrapped around a roller gives a man the strength of Hercules. This way, our workers can lift giant stones and erect our monumental buildings more easily!"
+        },
+        "4": {
+            "name": "Wellbeing",
+            "text": "The land is full of valuable treasures! We have learned to expand sulfur and crystals, and to mine valuable marble. On our slopes, beautiful vineyards grow, giving us exquisite wines! A new era of prosperity will be born if we make use of these treasures. In a store, we can offer goods to foreign merchants and buy the goods we need to live."
+        },
+        "5": {
+            "name": "Wine Culture",
+            "text": "The happiness of the population also comes from great parties where wine flows in abundance! Dionysus enjoys the joy that his gifts bring!"
+        },
+        "6": {
+            "name": "Improved Resource Collection",
+            "text": "Much time has passed since we learned how to use the resources of our island for our needs. Now we should educate our workers and allow each forest, quarry, vineyard, sulfur mine, and crystal mine to be managed by men who are both strong and skilled. This way we can obtain more resources and enrich our civilization!"
+        },
+        "7": {
+            "name": "Geometry",
+            "text": "Right angle, triangle, circle - some of the brightest minds can calculate how to build stronger and more splendid buildings. Soon our cities will be models to copy worldwide!"
+        },
+        "8": {
+            "name": "Architecture",
+            "text": "A good house can withstand the harshest elements. Even better when a brilliant mind designs it with some drawings and a bit of math in advance, so all walls are straight and the roof solid. Thanks to angles and compasses, our buildings will be much more stable and rain-protected. An Architect’s Office could save us a lot of marble—just imagine the savings when constructing a new building!"
+        },
+        "9": {
+            "name": "Day of Rest",
+            "text": "A well-rested worker is much more efficient than a tired one. That is why every citizen will have a day off per week, making our inhabitants happier!"
+        },
+        "10": {
+            "name": "Water Level",
+            "text": "Water always stays parallel to the ground—we should use this knowledge in building construction! Our city will shine even more, and we will spend much less wood and stone building!"
+        },
+        "11": {
+            "name": "Cellars",
+            "text": "Annual wine festivals bring the city to its feet! When the best grapes are pressed into wine, and liquid gold flows around, children enjoy themselves. With a skilled wine maker overseeing a wine press, we would waste much less. The wine master could also ensure proper storage so the wine matures well!"
+        },
+        "12": {
+            "name": "Cistern",
+            "text": "Eureka! A cistern in our settlement! Now we don’t have to wait for rain. Our inhabitants live better and the fields won’t suffer droughts!"
+        },
+        "13": {
+            "name": "Paper",
+            "text": "We have found a way to better archive our knowledge! Thanks to papyrus made from the cyperus papyrus plant, we no longer have to carve our wisdom into stones!"
+        },
+        "14": {
+            "name": "Ink",
+            "text": "Nature provides everything we need to write: the bird with its feathers; the sea with creatures that give ink. Now we can record our ideas more easily!"
+        },
+        "15": {
+            "name": "Optics",
+            "text": "When our scientists invent new things, much glass can break or get lost in the vastness of our laboratories. If an optician could ensure lenses and crystals are properly placed, we would waste much less glass!"
+        },
+        "16": {
+            "name": "Mechanical Pencil",
+            "text": "A clever device: a clever inventor has taught a machine to write. Now we can multiply our writings and accelerate the exchange of ideas and knowledge among our researchers!"
+        },
+        "17": {
+            "name": "Pneumatic Mail",
+            "text": "A wonderful system: now we can send our papyri through tubes, allowing them to reach our researchers faster! This saves long trips and reduces gold expenditure for communications!"
+        },
+        "18": {
+            "name": "Cartography",
+            "text": "Long marches through mountains and swamps wear down equipment. If we draw the most suitable paths for soldiers, they won’t lose time in undergrowth or mud, and uniforms will need less washing."
+        },
+        "19": {
+            "name": "Professional Army",
+            "text": "With a professional army, we can defend ourselves much better from pirates, barbarians, and other villains! It costs more than sending citizens to war, but our troops now know how to handle swords, spears, and shields."
+        },
+        "20": {
+            "name": "Siege",
+            "text": "With a metal-headed battering ram and the strength of ten men, we can even demolish entire city walls. Our soldiers will find it easier to conquer all cities!"
+        },
+        "21": {
+            "name": "Code of Honor",
+            "text": "Our soldiers are proud to serve their unit and island kingdom. They now treat their uniforms more carefully, reducing the need for repairs."
+        },
+        "22": {
+            "name": "Ballistics",
+            "text": "Finally, we know how to shoot arrows better at our enemies. With this knowledge, we should start training soldiers in this art. Soon archers will be deployed to war!"
+        },
+        "23": {
+            "name": "Lever Rule",
+            "text": "With this technique, we can unleash incredible forces, even hurl massive rocks through the air! If the rocks are large enough, we can also break down any city wall!"
+        },
+        "24": {
+            "name": "Pyrotechnics",
+            "text": "Sulfur is a truly terrible substance! With each new mixture, we can achieve an even greater impact. A safe practice ground allows our artificers to test inventions without endangering nearby buildings."
+        },
+        "25": {
+            "name": "Logistics",
+            "text": "Our soldiers can fight much better if they don’t have to carry so much equipment. Their uniforms also deteriorate less after long marches, reducing maintenance needs."
+        },
+        "26": {
+            "name": "Gunpowder",
+            "text": "This black mixture from the alchemist’s kitchen can ignite fire with great force, causing truly diabolical effects. Now we can load iron tubes with this powder to fire heavy cannonballs into the air."
+        },
+        "27": {
+            "name": "Robotics",
+            "text": "Our researchers have built a mechanical giant, with metal muscles and a steam heart! Only the bravest and most skilled soldiers can control such a monster, which terrorizes the enemy in the battlefield!"
+        },
+        "28": {
+            "name": "Cannon Foundry",
+            "text": "Our iron is getting heavier and harder! Now we can manufacture barrels to fire enormous balls at our enemies. With long-range bombs, enemy walls will tremble with fear!"
+        },
+        "29": {
+            "name": "Expansion",
+            "text": "The ocean surrounds us, but other islands await discovery. We are not alone! We can settle new territories, exploit new resources, and learn about other cultures! Our officials are happy to manage vast lands and their wealth."
+        }
+    },
+    "units": {
+        "1": {
+            "name": "Spearman",
+            "text": "Spearmen are conscripts from the rural population, that go into battle with light armour and basic spears. They do not usually have a chance against professional soldiers."
+        },
+        "2": {
+            "name": "Slinger",
+            "text": "Slings are light and cheap weapons. They cannot inflict much damage on well-armed opponents, but at least their munition is readily available."
+        },
+        "3": {
+            "name": "Archer",
+            "text": "Bows are a very popular hunting equipment, so it is very easy to recruit archers amongst citizens. Military training turns simple citizens into formidable long-range combat troops."
+        },
+        "4": {
+            "name": "Hoplite",
+            "text": "Hoplites are heavily armoured spearmen from the towns` middle classes. They form the heart of every Greek army. In the so-called `Phalanx` formation they push forward in an unstoppable wall of spears and shields."
+        },
+        "5": {
+            "name": "Swordsman",
+            "text": "Sword fighters are usually barely armoured and fight without shields to retain their mobility. Thus they can circulate around the immobile Phalanx formation and attack from the flanks."
+        },
+        "6": {
+            "name": "Steam Giant",
+            "text": "This powerful machine moves like a person on the battlefield, but has a superhuman hit strength. Stones, arrows and swords simply bounce off it. Woe betide anyone who dares to oppose it!"
+        }
     }
 }
