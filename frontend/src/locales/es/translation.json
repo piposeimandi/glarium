@@ -1,4 +1,511 @@
 {
-    "welcome": "Bienvenido a mi aplicación",
-    "logout": "Cerrar sesión"
+    "mayor": "Alcalde",
+    "general": "General",
+    "scientist": "Científico",
+    "diplomat": "Diplomático",
+    "layout": {
+        "highscore": "Puntuación alta",
+        "options": "Opciones",
+        "github": "Github",
+        "logout": "Cerrar sesión"
+    },
+    "navigation": {
+        "world": "Mundo",
+        "island": "Isla",
+        "city": "Ciudad",
+        "actionPoint": "Puntos de acción",
+        "showCities": "Mostrar ciudades",
+        "population": "Población",
+        "patreon": "Patreon"
+    },
+    "resources": {
+        "wood": "Madera",
+        "wine": "Vino",
+        "marble": "Mármol",
+        "glass": "Cristal",
+        "sulfur": "Azufre",
+        "ships": "Barcos",
+        "gold": "Oro",
+        "timec": "Tiempo",
+        "population": "Población"
+    },
+    "text": {
+        "message": "¿Estás seguro?",
+        "cancel": "Cancelar",
+        "confirm": "Confirmar",
+        "shipment": "Envío"
+    },
+    "buildings": {
+        "1": {
+            "name": "Ayuntamiento",
+            "text": "En el corazón de la ciudad se encuentra el ayuntamiento a través del cual la ciudad crece y prospera. Los inteligentes funcionarios civiles, que trabajan aquí, aman darte información sobre tu población local. Cada expansión del ayuntamiento aumenta el número máximo de ciudadanos en esta ciudad."
+        },
+        "2": {
+            "name": "Academia",
+            "text": "La academia es un lugar sublime lleno de conocimiento que combina tradiciones antiguas con tecnología moderna. ¡Las cabezas más sabias de tu ciudad esperan la entrada! Considera que cada científico necesita su propio laboratorio que cuesta dinero. Cuanto más grande sea la academia, más científicos podrás emplear al mismo tiempo."
+        },
+        "3": {
+            "name": "Almacén",
+            "text": "Parte de tus suministros están protegidos de los saqueadores en el almacén. Mantiene alejada la lluvia, los pájaros y otras plagas. El guardián del almacén también está siempre bien informado sobre tus suministros. Expandir tu almacén te permite proteger y almacenar más recursos."
+        },
+        "4": {
+            "name": "Cuartel",
+            "text": "En el Cuartel, la bulliciosa juventud se convierte en luchadores agudos. Tus soldados saben cómo manejar espadas, lanzas y hondas y también son capaces de liderar las máquinas de guerra más poderosas de manera segura a través del campo. Las tropas se entrenan más rápidamente cuando expandes tu Cuartel. Hay un tiempo mínimo de entrenamiento de 1 segundo por unidad y 10 segundos por orden de entrenamiento."
+        },
+        "5": {
+            "name": "Taberna",
+            "text": "Después de un duro día de trabajo, no hay nada más agradable que una jarra fresca de vino. Por eso tus ciudadanos aman reunirse en la taberna. Y cuando las últimas canciones antiguas se han cantado al final del día, salen alegremente y contentos a sus hogares. Cada expansión de tu taberna te permite servir más vino."
+        },
+        "6": {
+            "name": "Taller de Carpintero",
+            "text": "Solo se usa la mejor madera en el Taller de Carpintero. Nuestros hábiles artesanos usan esto para armar marcos de madera sólidos para que nuestras casas no tengan que repararse todo el tiempo. Cada nivel del Taller de Carpintero reduce tu demanda de material de construcción en un 1% del valor base, hasta un máximo del 50%."
+        },
+        "7": {
+            "name": "Óptico",
+            "text": "Las lentes y lupas no solo ayudan a nuestros científicos a ver claramente y a encontrar papeles importantes en su escritorio, sino que también son necesarias para inventar todas esas nuevas tecnologías que nos hacen tan orgullosos. El Óptico mantiene todo lo que necesitamos cuidadosamente almacenado en cajas, para que se pierdan menos cosas. Por cada nivel del edificio, la demanda de cristal en tu ciudad se reduce en un 1% del valor base, hasta un máximo del 50%."
+        },
+        "8": {
+            "name": "Área de Pruebas de Fuegos Artificiales",
+            "text": "Las pruebas constantes de fuegos artificiales no solo iluminan los cielos sino que a veces también los edificios circundantes. Sin embargo, nuestros científicos solo pueden optimizar la demanda de azufre si siguen probando nuevas mezclas. Por cada nivel del edificio, la demanda de azufre en tu ciudad se reduce en un 1% del valor base, hasta un máximo del 50%."
+        },
+        "9": {
+            "name": "Prensa de Vino",
+            "text": "Solo los vinos más puros maduran en las bodegas profundas y frescas de la ciudad. El bodeguero asegura que no se desperdicie ni una gota y que todo el vino pueda bajar por las gargantas de tus ciudadanos. Por cada nivel del edificio, la demanda de vino en tu ciudad se reduce en un 1% del valor base, hasta un máximo del 50%."
+        },
+        "10": {
+            "name": "Cantero",
+            "text": "Un Cantero entrenado siempre extrae los bloques correctos de mármol con sus fuertes brazos. Así se rompe menos y nuestros constructores siempre tienen el material que necesitan. Por cada nivel de expansión, este edificio aumenta tu producción de mármol en un 2% del valor base, hasta un máximo del 140%."
+        },
+        "11": {
+            "name": "Casa del Guardabosques",
+            "text": "Los leñadores fuertes pueden talar incluso los árboles más grandes. Pero también saben que un bosque debe cultivarse y plantar nuevos árboles para que podamos continuar usando solo la mejor madera para nuestras casas. Cada nivel de la Casa del Guardabosques aumenta tu producción de material de construcción en un 2% del valor base, hasta un máximo del 140%."
+        },
+        "12": {
+            "name": "Soplador de Vidrio",
+            "text": "Verdaderos maestros de su arte crean piezas centelleantes en la casa del Soplador de Vidrio. Los tubos de soplado, vasos y todo tipo de aparatos solo son entendidos por nuestros científicos. Y son tan hábiles, que apenas se rompe algo. Cada nivel del Soplador de Vidrio aumenta tu producción de cristal en un 2% del valor base, hasta un máximo del 140%."
+        },
+        "13": {
+            "name": "Torre del Alquimista",
+            "text": "Cuando el viento sopla del oeste, un olor llena las calles alrededor de la torre y no muchos ciudadanos se ven saliendo de la casa sin un tapón en la nariz. Nuestros alquimistas trabajan incansablemente en encontrar la mezcla perfecta y asegurando que podamos obtener la máxima cantidad de azufre del pozo. Por cada nivel del edificio, tu producción de azufre aumenta en un 2% del valor base, hasta un máximo del 140%."
+        },
+        "14": {
+            "name": "Bodega",
+            "text": "Un viticultor solo elige las colinas más soleadas de la zona circundante para cubrirlas con el reconfortante verde de las vides. Así las viñas producen frutos jugosos que hacen una cosecha mucho mejor. Cada nivel de la Bodega aumenta tu producción de vino en un 2% del valor base, hasta un máximo del 140%."
+        },
+        "15": {
+            "name": "Cantero",
+            "text": "Un Cantero entrenado siempre extrae los bloques correctos de mármol con sus fuertes brazos. Así se rompe menos y nuestros constructores siempre tienen el material que necesitan. Por cada nivel de expansión, este edificio aumenta tu producción de mármol en un 2% del valor base, hasta un máximo del 140%."
+        },
+        "16": {
+            "name": "Puerto Comercial",
+            "text": "El puerto es tu puerta al mundo. Aquí puedes reclutar barcos de transporte y prepararlos para largos viajes. Si tienes un Astillero, también puedes comprar Cargueros aquí en el puerto. Puedes recoger bienes preciosos de todo el mundo aquí. En puertos más grandes, tus barcos cargarán más rápido. Puedes construir otro puerto, que aumenta tu velocidad de carga, tan pronto como completes la investigación dique seco."
+        },
+        "17": {
+            "name": "Palacio",
+            "text": "¡El Palacio es un excelente lugar para liderar tu imperio hacia el futuro! También proporciona una vista hermosa del mar. Cada expansión del Palacio de tu capital te permite fundar una colonia adicional. Los niveles 21 y superiores del Palacio no permiten construir más ciudades. El máximo actual de 21 ciudades (1 capital + 20 colonias) permanece, pero estos niveles más altos permiten ocupar ciudades enemigas incluso si has alcanzado el límite de tus propias ciudades."
+        },
+        "18": {
+            "name": "Residencia del Gobernador",
+            "text": "Un gobernador en tu colonia garantiza que todas las tareas administrativas diarias se hagan correctamente. También reduce el nivel de corrupción en tu colonia. La residencia del gobernador puede actualizarse a un palacio si alguna vez quieres mover tu capital."
+        },
+        "19": {
+            "name": "Muralla de la Ciudad",
+            "text": "La muralla de la ciudad protege a tus ciudadanos contra tus enemigos y el sol. ¡Cuidado! Los enemigos intentarán hacer agujeros en tu muralla o escalarla. Cada nivel aumenta la resistencia de tu muralla de la ciudad."
+        }
+    },
+    "modal": {
+        "general": {
+            "militia": "Milicia",
+            "receivedMessages": "Mensajes Recibidos",
+            "sentReports": "Reportes Enviados",
+            "movements": "Movimientos ({{count}})",
+            "warReports": "Reportes de Guerra ({{count}})",
+            "tabReceivedTitle": "Mensajes Recibidos",
+            "tabSentTitle": "Mensajes Enviados",
+            "noMovements": "No hay movimientos",
+            "altMovements": "Icono de movimientos",
+            "altReports": "Icono de reportes",
+            "mission": "Misión",
+            "schedule": "Horario",
+            "origin": "Origen",
+            "destination": "Destino",
+            "action": "Acción",
+            "viewCargo": "Ver Carga",
+            "withdraw": "Retirar",
+            "movementType": {
+                "transport": "Transporte",
+                "attack": "Ataque",
+                "defense": "Defensa",
+                "colonize": "Colonizar"
+            }
+        },
+        "research": {
+            "scientistAlt": "Icono de científico",
+            "piAlt": "Icono de PI",
+            "researchTimeAlt": "Icono de tiempo de investigación",
+            "scientists": "Científicos",
+            "pi": "PI",
+            "perHour": "Por hora",
+            "cost": "Costo",
+            "previousLevelRequired": "Nivel anterior requerido",
+            "finished": "Terminado",
+            "researchButton": "Investigar",
+            "notEnoughPoints": "No hay suficientes puntos",
+            "windowLeftTitle": "Asesor Científico",
+            "windowRightTitle": "Área de Investigación"
+        },
+        "donations": {
+            "level": "Nivel",
+            "required_next_level": "Requerido para el siguiente nivel:",
+            "existing": "Existente:",
+            "donate": "Donar",
+            "enter_amount": "Ingresar cantidad",
+            "max": "Máx",
+            "confirm": "Confirmar",
+            "under_construction": "En construcción",
+            "forestTitle": "Bosque",
+            "vinesTitle": "Vides",
+            "quarryTitle": "Cantera",
+            "crystalTitle": "Cristal",
+            "sulfurTitle": "Azufre",
+            "workers": "Trabajadores",
+            "islandCities": "Ciudades de la Isla",
+            "income": "Ingreso",
+            "production": "Producción",
+            "perHour": "por hora"
+        },
+        "mayor": {
+            "title": "Alcalde",
+            "current_events": "Eventos actuales ({{total}})",
+            "place": "Lugar",
+            "date": "Fecha",
+            "subject": "Asunto",
+            "go_to_city": "Ir a la ciudad",
+            "merchant_arrived": "Tu flota mercante de {{from}} ha llegado a {{to}} y ha entregado los siguientes bienes:",
+            "enemy_arrived": "Una flota enemiga de {{from}} ha llegado a tu ciudad {{to}} y ha entregado los siguientes bienes:",
+            "city_founded": "Tu ciudad {{city}} ha sido fundada.",
+            "units_completed": "Unidades han sido completadas en el cuartel:",
+            "prev_10": "10 anteriores",
+            "next_10": "10 siguientes"
+        },
+        "message": {
+            "actions": "Acciones",
+            "receiver": "Receptor",
+            "subject": "Asunto",
+            "message": "Mensaje",
+            "city": "Ciudad",
+            "date": "Fecha",
+            "go_to_city": "Ir a la ciudad",
+            "all": "Todos",
+            "none": "Ninguno",
+            "unread": "No leído",
+            "read": "Leído",
+            "prev_10": "10 mensajes anteriores",
+            "next_10": "10 mensajes siguientes",
+            "mark_read": "Marcar como leído",
+            "remove": "Eliminar",
+            "inbox": "Bandeja de entrada",
+            "outbox": "Bandeja de salida",
+            "inbox_title": "Mensajes recibidos no leídos/totales",
+            "outbox_title": "Mensajes enviados",
+            "noMessage": "No hay mensajes disponibles"
+        },
+        "islandCity": {
+            "viewReport": "Ver Reporte",
+            "ship": "Barco",
+            "journeyTime": "Tiempo de Viaje",
+            "loadTime": "Tiempo de Carga",
+            "travelTime": "Tiempo de Viaje",
+            "target": "Objetivo",
+            "attackInfo": "Otras ciudades pueden tener tesoros mejor almacenados en nuestro depósito. Las unidades fuera de tu ciudad pagan el doble de mantenimiento. Piensa cuidadosamente antes de enviar tus tropas a saquear.",
+            "sendArmy": "Enviar Ejército",
+            "attackWarning": "Ordena a tus tropas de Polis saquear la ciudad. ¡Mantén el puerto de la ciudad objetivo libre de barcos enemigos, o tus tropas pueden ser capturadas por barcos mercantes!",
+            "plunder": "¡Saquear!",
+            "text": "Envía un mensaje a otra ciudad.",
+            "receiver": "Receptor",
+            "subject": "Asunto",
+            "message": "Mensaje",
+            "errorMessage": "El mensaje no puede estar vacío.",
+            "characters": "caracteres restantes",
+            "send": "Enviar",
+            "transportMsg": "Selecciona qué bienes y cuántos quieres transportar de {{city_from.name}} a {{data.city.name}}. ¡Ten en cuenta el número de barcos comerciales que necesitarás para esta operación!",
+            "name": "Ciudad",
+            "player": "Jugador",
+            "alliance": "Alianza",
+            "points": "Puntos",
+            "writeMessage": "Escribir Mensaje",
+            "transportResources": "Transportar Recursos",
+            "attack": "Saquear",
+            "info": "Info",
+            "diplomacy": "Diplomacia",
+            "defend": "¡Defender la ciudad!",
+            "transport": "Transportar bienes",
+            "actions": "Acciones",
+            "colonizeTitle": "Colonizar",
+            "colonizeInfo": "¡Este lugar parece perfecto para una nueva ciudad! Una sección poco profunda de la costa proporciona acceso al océano y las colinas verdes fértiles en el área pueden alimentar a mucha gente.",
+            "colonizeRequirements": "La fundación de una colonia requiere:"
+        },
+        "building": {
+            "list_title": "Lista de construcción",
+            "text": "Un lugar vasto y vacío llama tu atención. ¿Qué edificio deberían construir tus ciudadanos aquí?",
+            "research": "Investigación requerida:",
+            "buildNow": "¡Construir ahora!",
+            "noResources": "No tienes suficientes recursos",
+            "building": "En construcción",
+            "title": "Unidades programadas para entrenamiento",
+            "no_units": "No se han seleccionado unidades",
+            "button": "Entrenar",
+            "trainFormation": "Entrenar unidades",
+            "max": "máx",
+            "required_level": "Nivel de cuartel requerido {{level}}",
+            "notice_title": "Aviso",
+            "no_issue": "¡Nada que reportar! Felicidades, todo en la ciudad está en orden.",
+            "corruption_title": "La corrupción está rampante en esta ciudad.",
+            "corruption_text": "¡La productividad y la satisfacción en esta ciudad están claramente declinando! Expande tu Residencia del Gobernador o Palacio para reducir la corrupción.",
+            "living_space": "Espacio vital: {{current}}/{{max}}",
+            "action_points": "Puntos de acción: {{current}}/{{max}}",
+            "growth": "Crecimiento: {{amount}} por hora",
+            "total_gold": "Oro total: {{amount}}",
+            "corruption": "Corrupción: {{amount}}%",
+            "happy": "Feliz",
+            "change_city_name": "Cambiar nombre de la ciudad",
+            "previous_name": "Nombre anterior de la ciudad:",
+            "new_name": "Nuevo nombre de la ciudad:",
+            "accept_name": "Aceptar nombre",
+            "satisfaction_title": "Nivel de Satisfacción",
+            "satisfaction_description": "La satisfacción en tu ciudad está influenciada por varios factores. Este gráfico puede ayudar a identificar problemas y oportunidades.",
+            "bonuses": "Bonos",
+            "basic_bonus": "Bono básico",
+            "wine": "Vino",
+            "no_tavern": "¡Aún no hay una Taberna en esta ciudad!",
+            "maintenance": "Mantenimiento",
+            "population": "Población",
+            "satisfaction_level": "Nivel de Satisfacción:",
+            "capital": "Capital",
+            "colony": "Colonia",
+            "workers": "Trabajadores",
+            "confirm": "Confirmar",
+            "income": "Ingreso",
+            "production": "Producción",
+            "perHour": "por hora",
+            "upgrade": "Actualizar",
+            "demolition": "Demolición",
+            "level": "Nivel",
+            "upgradeText": "Actualizar edificio a nivel {{level}}",
+            "warehouse": {
+                "title": "Almacén",
+                "safe": "Protegido",
+                "notSafe": "No protegido",
+                "total": "Total",
+                "capacity": "Capacidad"
+            },
+            "buildingProducer": {
+                "title": "Producción de {{building}}",
+                "productionBase": "Producción Base",
+                "total": "Total"
+            },
+            "port": {
+                "speedTitle": "Velocidad de Carga del Puerto",
+                "speedText": "Esta es la velocidad a la que tu puerto puede cargar bienes.",
+                "speedMin": "por min",
+                "tradeShipBuyTitle": "Comprar Barco Comercial",
+                "tradeShipBuyText": "Puedes comprar barcos comerciales para expandir tus capacidades comerciales.",
+                "tradeShipBuyBtn": "Comprar Barco Comercial",
+                "tradeShipBuyMissing1": "No hay suficiente oro para comprar un barco comercial.",
+                "tradeShipBuyMissing2": "Necesitas {{goldMissing}} más oro.",
+                "cost": "Costo"
+            },
+            "buildingReducer": {
+                "building": "Edificio",
+                "costBase": "Costo Base",
+                "research": "Investigación"
+            },
+            "tavern": {
+                "title": "Servir Vino",
+                "description": "Puedes determinar cuánto vino se servirá a tu población. Cuanto más vino ofrezcas, más felices serán tus ciudadanos. Advertencia: ¡Cada vez que distribuyas más vino, el tabernero necesitará una ración extra!",
+                "citizensSatisfied": "Ciudadanos Satisfechos",
+                "noWine": "Sin vino",
+                "winePerHour": "vino por hora"
+            },
+            "barracks": {
+                "requiredLevel": "Requiere nivel de edificio {{level}}",
+                "max": "máx"
+            }
+        }
+    },
+    "login": {
+        "title": "Iniciar Sesión",
+        "emailPlaceholder": "Correo electrónico",
+        "passwordPlaceholder": "Contraseña",
+        "submit": "Enviar",
+        "noAccount": "¿No tienes una cuenta?",
+        "createAccount": "Crear una"
+    },
+    "register": {
+        "title": "Registrarse",
+        "namePlaceholder": "Nombre",
+        "emailPlaceholder": "Correo electrónico",
+        "passwordPlaceholder": "Contraseña",
+        "passwordConfirmPlaceholder": "Confirmación de Contraseña",
+        "submit": "Enviar",
+        "errorPlaceholder": "Marcador de mensaje de error",
+        "alreadyAccount": "¿Ya tienes una cuenta?",
+        "login": "Iniciar Sesión"
+    },
+    "validation": {
+        "required": "Este campo es obligatorio",
+        "max": "Máximo {{max}} caracteres",
+        "invalidEmail": "Dirección de correo electrónico inválida",
+        "passwordsNotMatch": "Las contraseñas no coinciden"
+    },
+    "researchCategories": {
+        "1": "Navegación",
+        "2": "Economía",
+        "3": "Conocimiento",
+        "4": "Militar"
+    },
+    "research": {
+        "1": {
+            "name": "Carpintería",
+            "text": "Los bosques de nuestras islas ofrecen excelente madera para construir vigas resistentes para los techos de nuestros edificios más hermosos. Sin embargo, es necesario elegir las piezas con cuidado y tratarlas. Un carpintero de la ciudad aseguraría que se desperdicie mucho menos madera."
+        },
+        "2": {
+            "name": "Conservación",
+            "text": "Hemos aprendido a almacenar nuestras materias primas bien protegidas durante mucho tiempo. ¡Además, parte de nuestras reservas está asegurada contra el robo de piratas y otros villanos!"
+        },
+        "3": {
+            "name": "Polea",
+            "text": "Una idea brillante: Una cuerda envuelta alrededor de un rodillo da a un hombre la fuerza de Hércules. ¡De esta manera, nuestros trabajadores pueden levantar piedras gigantes y erigir nuestros edificios monumentales más fácilmente!"
+        },
+        "4": {
+            "name": "Bienestar",
+            "text": "¡La tierra está llena de tesoros valiosos! Hemos aprendido a expandir azufre y cristales, y a minar mármol valioso. En nuestras laderas, crecen hermosas viñas, dándonos vinos exquisitos. ¡Una nueva era de prosperidad nacerá si aprovechamos estos tesoros. En una tienda, podemos ofrecer bienes a mercaderes extranjeros y comprar los bienes que necesitamos para vivir."
+        },
+        "5": {
+            "name": "Cultura del Vino",
+            "text": "¡La felicidad de la población también viene de grandes fiestas donde el vino fluye en abundancia! ¡Dionisio disfruta la alegría que sus regalos traen!"
+        },
+        "6": {
+            "name": "Recolección Mejorada de Recursos",
+            "text": "Mucho tiempo ha pasado desde que aprendimos a usar los recursos de nuestra isla para nuestras necesidades. Ahora deberíamos educar a nuestros trabajadores y permitir que cada bosque, cantera, viña, mina de azufre y mina de cristal sea administrada por hombres que sean tanto fuertes como hábiles. ¡De esta manera podemos obtener más recursos y enriquecer nuestra civilización!"
+        },
+        "7": {
+            "name": "Geometría",
+            "text": "Ángulo recto, triángulo, círculo - algunas de las mentes más brillantes pueden calcular cómo construir edificios más fuertes y espléndidos. ¡Pronto nuestras ciudades serán modelos para copiar en todo el mundo!"
+        },
+        "8": {
+            "name": "Arquitectura",
+            "text": "Una buena casa puede resistir los elementos más duros. Aún mejor cuando una mente brillante la diseña con algunos dibujos y un poco de matemáticas de antemano, para que todas las paredes sean rectas y el techo sólido. Gracias a ángulos y compases, nuestros edificios serán mucho más estables y protegidos de la lluvia. ¡Una Oficina de Arquitectos podría ahorrarnos mucho mármol - solo imagina los ahorros al construir un nuevo edificio!"
+        },
+        "9": {
+            "name": "Día de Descanso",
+            "text": "Un trabajador bien descansado es mucho más eficiente que uno cansado. ¡Por eso cada ciudadano tendrá un día libre por semana, haciendo a nuestros habitantes más felices!"
+        },
+        "10": {
+            "name": "Nivel de Agua",
+            "text": "¡El agua siempre se mantiene paralela al suelo - deberíamos usar este conocimiento en la construcción de edificios! Nuestra ciudad brillará aún más, ¡y gastaremos mucho menos madera y piedra al construir!"
+        },
+        "11": {
+            "name": "Bodegas",
+            "text": "¡Los festivales anuales de vino ponen a la ciudad de pie! Cuando las mejores uvas se prensan en vino, y el oro líquido fluye alrededor, los niños se divierten. Con un hábil vinicultor supervisando una prensa de vino, desperdiciaríamos mucho menos. ¡El maestro del vino también podría asegurar un almacenamiento adecuado para que el vino madure bien!"
+        },
+        "12": {
+            "name": "Cisterna",
+            "text": "¡Eureka! ¡Una cisterna en nuestro asentamiento! Ahora no tenemos que esperar la lluvia. ¡Nuestros habitantes viven mejor y los campos no sufrirán sequías!"
+        },
+        "13": {
+            "name": "Papel",
+            "text": "¡Hemos encontrado una manera de archivar mejor nuestro conocimiento! Gracias al papiro hecho de la planta cyperus papyrus, ¡ya no tenemos que tallar nuestra sabiduría en piedras!"
+        },
+        "14": {
+            "name": "Tinta",
+            "text": "La naturaleza proporciona todo lo que necesitamos para escribir: el pájaro con sus plumas; el mar con criaturas que dan tinta. ¡Ahora podemos registrar nuestras ideas más fácilmente!"
+        },
+        "15": {
+            "name": "Óptica",
+            "text": "Cuando nuestros científicos inventan cosas nuevas, mucho cristal puede romperse o perderse en la vastedad de nuestros laboratorios. Si un óptico pudiera asegurar que las lentes y cristales se coloquen correctamente, ¡desperdiciaríamos mucho menos cristal!"
+        },
+        "16": {
+            "name": "Lápiz Mecánico",
+            "text": "Un dispositivo inteligente: un inventor inteligente ha enseñado a una máquina a escribir. ¡Ahora podemos multiplicar nuestras escrituras y acelerar el intercambio de ideas y conocimiento entre nuestros investigadores!"
+        },
+        "17": {
+            "name": "Correo Neumático",
+            "text": "Un sistema maravilloso: ahora podemos enviar nuestros papiros a través de tubos, permitiendo que lleguen a nuestros investigadores más rápido. ¡Esto ahorra largos viajes y reduce el gasto de oro para comunicaciones!"
+        },
+        "18": {
+            "name": "Cartografía",
+            "text": "Las largas marchas a través de montañas y pantanos desgastan el equipo. Si dibujamos los caminos más adecuados para los soldados, no perderán tiempo en maleza o barro, y los uniformes necesitarán menos lavado."
+        },
+        "19": {
+            "name": "Ejército Profesional",
+            "text": "Con un ejército profesional, podemos defendernos mucho mejor de piratas, bárbaros y otros villanos. Cuesta más que enviar ciudadanos a la guerra, pero nuestras tropas ahora saben cómo manejar espadas, lanzas y escudos."
+        },
+        "20": {
+            "name": "Asedio",
+            "text": "Con una cabeza de metal de ariete y la fuerza de diez hombres, podemos incluso demoler murallas enteras de ciudades. ¡Nuestros soldados encontrarán más fácil conquistar todas las ciudades!"
+        },
+        "21": {
+            "name": "Código de Honor",
+            "text": "Nuestros soldados están orgullosos de servir a su unidad y reino insular. Ahora tratan sus uniformes con más cuidado, reduciendo la necesidad de reparaciones."
+        },
+        "22": {
+            "name": "Balística",
+            "text": "Finalmente, sabemos cómo disparar flechas mejor a nuestros enemigos. Con este conocimiento, deberíamos comenzar a entrenar soldados en este arte. ¡Pronto se desplegarán arqueros a la guerra!"
+        },
+        "23": {
+            "name": "Regla de Palanca",
+            "text": "Con esta técnica, podemos liberar fuerzas increíbles, ¡incluso lanzar rocas masivas por el aire! Si las rocas son lo suficientemente grandes, ¡también podemos derribar cualquier muralla de ciudad!"
+        },
+        "24": {
+            "name": "Pirotecnia",
+            "text": "¡El azufre es una sustancia verdaderamente terrible! Con cada nueva mezcla, podemos lograr un impacto aún mayor. Un campo de práctica seguro permite a nuestros artificieros probar invenciones sin poner en peligro edificios cercanos."
+        },
+        "25": {
+            "name": "Logística",
+            "text": "Nuestros soldados pueden luchar mucho mejor si no tienen que llevar tanto equipo. Sus uniformes también se deterioran menos después de largas marchas, reduciendo las necesidades de mantenimiento."
+        },
+        "26": {
+            "name": "Pólvora",
+            "text": "Esta mezcla negra de la cocina del alquimista puede encender fuego con gran fuerza, causando efectos verdaderamente diabólicos. Ahora podemos cargar tubos de hierro con este polvo para disparar pesadas bolas de cañón al aire."
+        },
+        "27": {
+            "name": "Robótica",
+            "text": "¡Nuestros investigadores han construido un gigante mecánico, con músculos de metal y un corazón de vapor! ¡Solo los soldados más valientes y hábiles pueden controlar tal monstruo, que aterroriza al enemigo en el campo de batalla!"
+        },
+        "28": {
+            "name": "Fundición de Cañones",
+            "text": "¡Nuestro hierro se está volviendo más pesado y duro! Ahora podemos fabricar barriles para disparar bolas enormes a nuestros enemigos. ¡Con bombas de largo alcance, las murallas enemigas temblarán de miedo!"
+        },
+        "29": {
+            "name": "Expansión",
+            "text": "El océano nos rodea, pero otras islas esperan ser descubiertas. ¡No estamos solos! Podemos asentarnos en nuevos territorios, explotar nuevos recursos y aprender sobre otras culturas. Nuestros funcionarios están felices de administrar vastas tierras y su riqueza."
+        }
+    },
+    "units": {
+        "1": {
+            "name": "Lancero",
+            "text": "Los lanceros son conscriptos de la población rural, que van a la batalla con armadura ligera y lanzas básicas. Normalmente no tienen oportunidad contra soldados profesionales."
+        },
+        "2": {
+            "name": "Hondero",
+            "text": "Las hondas son armas ligeras y baratas. No pueden infligir mucho daño a oponentes bien armados, pero al menos su munición está fácilmente disponible."
+        },
+        "3": {
+            "name": "Arquero",
+            "text": "Los arcos son un equipo de caza muy popular, por lo que es muy fácil reclutar arqueros entre ciudadanos. El entrenamiento militar convierte ciudadanos simples en tropas formidables de combate a largo alcance."
+        },
+        "4": {
+            "name": "Hoplita",
+            "text": "Los hoplitas son lanceros fuertemente armados de las clases medias de las ciudades. Forman el corazón de cada ejército griego. En la llamada formación 'Falange' avanzan en una pared imparable de lanzas y escudos."
+        },
+        "5": {
+            "name": "Espadachín",
+            "text": "Los espadachines suelen estar apenas armados y luchan sin escudos para retener su movilidad. Así pueden circular alrededor de la inmóvil formación de Falange y atacar desde los flancos."
+        },
+        "6": {
+            "name": "Gigante de Vapor",
+            "text": "Esta poderosa máquina se mueve como una persona en el campo de batalla, pero tiene una fuerza de golpe sobrehumana. Piedras, flechas y espadas simplemente rebotan en ella. ¡Ay de aquel que se atreva a oponerse a ella!"
+        }
+    }
 }
