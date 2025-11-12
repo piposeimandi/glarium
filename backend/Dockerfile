@@ -15,6 +15,6 @@ RUN npm install
 COPY . .
 
 # Default command to run the backend server
-COPY entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
-ENTRYPOINT ["/entrypoint.sh"]
+COPY entrypoint.sh entrypoint.sh
+RUN chmod +x entrypoint.sh
+ENTRYPOINT ["sh", "entrypoint.sh"]
